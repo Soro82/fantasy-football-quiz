@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Fantasy Football Quiz</title>
 </head>
 <body>
     <h1>Fantasy Football Quiz</h1>
     <div class="question-area">
+        <h3>Question <span id="question-num">1</span></h3>
+        <div id="answers-area">
+            <input type="radio" name="answers" id="answer-option1">
+            <label for="answer-option1">0</label>
+            <input type="radio" name="answers" id="answer-option2">
+            <label for="answer-option2">0</label>
+            <input type="radio" name="answers" id="answer-option3">
+            <label for="answer-option3">0</label>
+        </div>
         <div class="buttons">
             <button id="previousQ">Previous Question</button>
             <button id="nextQ">Next Question</button>
         </div>
     </div>
-    <div class="scores">
-
+    <div class="score-area">
+        <p class="scores">Correct Answers <span id="correct">0</span></p>
+        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
     </div>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

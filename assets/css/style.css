@@ -1,3 +1,7 @@
 .question-area {
     border: 2px solid;
 }
+
+#answers-area {
+    display: flex;
+}

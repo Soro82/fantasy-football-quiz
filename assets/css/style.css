@@ -2,6 +2,6 @@
     border: 2px solid;
 }
 
-#answers-area {
+.radio-btn {
     display: flex;
 }

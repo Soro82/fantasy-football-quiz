@@ -11,6 +11,8 @@ h1 {
     margin: auto;
 }
 
-.radio-btn {
+#answers-area {
     display: flex;
+    flex-direction: row;
+    margin: 1rem;
 }

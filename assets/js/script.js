@@ -1,9 +1,18 @@
-function startQuiz() {
 
+function startQuiz() {
+    let nextQuestion = document.getElementById('nextQ');
+    nextQuestion.addEventListener('click', function(){
+        console.log('question');
+        pickQuestion();
+    })
 }
 
-function pickQuestion() {
+startQuiz();
 
+function pickQuestion() {
+    let question = questions[0].question;
+    console.log(question);
+    document.getElementById('question').innerText = question;
 }
 
 function setAnswers() {
@@ -27,5 +36,5 @@ function showResult() {
 }
 
 function resetGame() {
-    
+
 }

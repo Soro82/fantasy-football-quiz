@@ -2,21 +2,25 @@
 function startQuiz() {
     let nextQuestion = document.getElementById('nextQ');
     nextQuestion.addEventListener('click', function(){
-        console.log('question');
         pickQuestion();
     })
 }
 
 startQuiz();
 
+
 function pickQuestion() {
     let question = questions[0].question;
-    console.log(question);
     document.getElementById('question').innerText = question;
+    setAnswers();
 }
 
 function setAnswers() {
+    let displayAnswers = document.getElementsByClassName('answers');
 
+    displayAnswers[0].innerText = questions[0].answers[0];
+    displayAnswers[1].innerText = questions[0].answers[1];
+    displayAnswers[2].innerText = questions[0].answers[2];
 }
 
 function checkAnswer() {

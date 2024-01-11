@@ -10,17 +10,19 @@ startQuiz();
 
 
 function pickQuestion() {
-    let question = questions[0].question;
+    let num = Math.floor(Math.random() * 5);
+    let question = questions[num].question;
     document.getElementById('question').innerText = question;
-    setAnswers();
+    document.getElementById('question-num').innerText = num + 1;
+    setAnswers(num);
 }
 
-function setAnswers() {
+function setAnswers(num) {
     let displayAnswers = document.getElementsByClassName('answers');
 
-    displayAnswers[0].innerText = questions[0].answers[0];
-    displayAnswers[1].innerText = questions[0].answers[1];
-    displayAnswers[2].innerText = questions[0].answers[2];
+    displayAnswers[0].innerText = questions[num].answers[0];
+    displayAnswers[1].innerText = questions[num].answers[1];
+    displayAnswers[2].innerText = questions[num].answers[2];
 }
 
 function checkAnswer() {

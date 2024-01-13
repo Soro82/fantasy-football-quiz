@@ -25,7 +25,20 @@ function setAnswers(num) {
     displayAnswers[2].innerText = questions[num].answers[2];
 }
 
+function checkAnswerClicked() {
+    let answerBox1 = document.getElementById('answer1');
+    let answerBox2 = document.getElementById('answer2');
+    let answerBox3 = document.getElementById('answer3');
+
+    
+        if (answerBox1.addEventListener('click', function(){
+            let answerClicked = 1;
+        }))
+    
+}
+
 function checkAnswer() {
+    
 
 }
 

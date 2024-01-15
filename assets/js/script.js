@@ -31,10 +31,10 @@ function pickQuestion() {
         questionNumDisplay++;
         if (questionNumDisplay >= 3) {
             endQuiz();
-        } else {
-            numArray.push(num);
-            setAnswers(num);
         }
+
+        numArray.push(num);
+        setAnswers(num);        
         
     }
     

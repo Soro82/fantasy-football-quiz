@@ -29,9 +29,13 @@ function pickQuestion() {
         let question = questions[num].question;
         document.getElementById('question').innerText = question;
         questionNumDisplay++;
+        if (questionNumDisplay >= 3) {
+            endQuiz();
+        } else {
+            numArray.push(num);
+            setAnswers(num);
+        }
         
-        numArray.push(num);
-        setAnswers(num);
     }
     
     document.getElementById('question-num').innerText = questionNumDisplay;
@@ -97,6 +101,11 @@ function incrementCorrectAnswers() {
 
 function nextQuestion() {
     // document.getElementById('question-num').innerText += 1;
+}
+
+function endQuiz() {
+    document.getElementById('nextQ').disabled = true;
+    
 }
 
 function showResult() {

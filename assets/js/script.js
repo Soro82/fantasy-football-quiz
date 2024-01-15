@@ -12,8 +12,11 @@ function startQuiz() {
 
 startQuiz();
 
-
+/**
+ * Picks a random question from the questions array and checks to see if it was asked previously
+ */
 function pickQuestion() {
+    // generate random number between 0 and 4
     let num = Math.floor(Math.random() * 5);
     
     if (numArray.includes(num)) {
@@ -31,6 +34,9 @@ function pickQuestion() {
     console.log(questionNumDisplay);
 }
 
+/**
+ * Displays the possible answers to the question picked in pickQuestion function
+ */
 function setAnswers(num) {
     displayAnswers[0].innerText = questions[num].answers[0];
     displayAnswers[1].innerText = questions[num].answers[1];
@@ -38,6 +44,9 @@ function setAnswers(num) {
     checkAnswerClicked(num);
 }
 
+/**
+ * Checks which answer the user clicked on and sends it to the checkAnswer function.
+ */
 function checkAnswerClicked(questionNum) {
     let answerBox1 = document.getElementById('answer1');
     let answerBox2 = document.getElementById('answer2');

@@ -1,4 +1,5 @@
 const displayAnswers = document.getElementsByClassName('answers');
+let numArray = [];
 
 function startQuiz() {
     let nextQuestion = document.getElementById('nextQ');
@@ -11,11 +12,20 @@ startQuiz();
 
 
 function pickQuestion() {
-    let num = Math.floor(Math.random() * 5);
-    let question = questions[num].question;
-    document.getElementById('question').innerText = question;
-    document.getElementById('question-num').innerText = num + 1;
-    setAnswers(num);
+    let num = Math.floor(Math.random() * 5);    
+    
+    if (numArray.includes(num)) {
+        pickQuestion();
+    } else {
+        let question = questions[num].question;
+        document.getElementById('question').innerText = question;
+        document.getElementById('question-num').innerText = num + 1;
+        numArray.push(num);
+        setAnswers(num);
+    }
+    
+    
+    console.log(numArray);
 }
 
 function setAnswers(num) {

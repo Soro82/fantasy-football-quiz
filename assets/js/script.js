@@ -74,10 +74,10 @@ function checkAnswer(questionNumber, answerPicked) {
     let correctAns = questions[questionNumber].correctAnswer;
     
     if (correctAns === answerPicked) {
-        console.log('Correct answer');
+        document.getElementById('question-response').innerText = "Correct answer. Well done.";
         incrementCorrectAnswers();
     } else {
-        console.log('Incorrect answer');
+        document.getElementById('question-response').innerText = "Incorrect answer. Better luck next time.";
     }
 
 }

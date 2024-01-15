@@ -8,6 +8,9 @@ function startQuiz() {
     let nextQuestion = document.getElementById('nextQ');
     nextQuestion.addEventListener('click', function(){
         pickQuestion();
+        document.getElementById('answer1').style.backgroundColor = 'plum';
+        document.getElementById('answer2').style.backgroundColor = 'plum';
+        document.getElementById('answer3').style.backgroundColor = 'plum';
     })
 }
 

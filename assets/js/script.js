@@ -1,6 +1,7 @@
 const displayAnswers = document.getElementsByClassName('answers');
 let numArray = [];
 let questionNumDisplay = 0;
+let currentScore = 0;
 
 function startQuiz() {
     document.getElementById('question-num').innerText = 1;
@@ -55,35 +56,37 @@ function checkAnswerClicked(questionNum) {
     
     answerBox1.addEventListener('click', function(){
         answerClicked = parseInt(document.getElementById('answer1').innerText);
-        checkAnswer(questionNum, answerClicked); 
+        checkAnswer(questionNum, answerClicked, 0); 
     })
 
     answerBox2.addEventListener('click', function(){
         answerClicked = parseInt(document.getElementById('answer2').innerText);
-        checkAnswer(questionNum, answerClicked);
+        checkAnswer(questionNum, answerClicked, 1);
     })
 
     answerBox3.addEventListener('click', function(){
         answerClicked = parseInt(document.getElementById('answer3').innerText);
-        checkAnswer(questionNum, answerClicked);
+        checkAnswer(questionNum, answerClicked, 2);
     })   
     
 }
 
-function checkAnswer(questionNumber, answerPicked) {
+function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
     let correctAns = questions[questionNumber].correctAnswer;
     
     if (correctAns === answerPicked) {
         document.getElementById('question-response').innerText = "Correct answer. Well done.";
+        document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'green';
         incrementCorrectAnswers();
     } else {
         document.getElementById('question-response').innerText = "Incorrect answer. Better luck next time.";
+        document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'red';
     }
 
 }
 
 function incrementCorrectAnswers() {
-    let currentScore = 0;
+
     currentScore++;
     document.getElementById('correct-answers').innerText = currentScore;
 

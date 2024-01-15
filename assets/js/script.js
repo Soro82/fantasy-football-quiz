@@ -59,17 +59,17 @@ function checkAnswerClicked(questionNum) {
     
     answerBox1.addEventListener('click', function(){
         answerClicked = parseInt(document.getElementById('answer1').innerText);
-        checkAnswer(questionNum, answerClicked, 0); 
+        checkAnswer(questionNum, answerClicked, 1); 
     })
 
     answerBox2.addEventListener('click', function(){
         answerClicked = parseInt(document.getElementById('answer2').innerText);
-        checkAnswer(questionNum, answerClicked, 1);
+        checkAnswer(questionNum, answerClicked, 2);
     })
 
     answerBox3.addEventListener('click', function(){
         answerClicked = parseInt(document.getElementById('answer3').innerText);
-        checkAnswer(questionNum, answerClicked, 2);
+        checkAnswer(questionNum, answerClicked, 3);
     })   
     
 }

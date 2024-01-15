@@ -53,6 +53,7 @@ function checkAnswer(questionNumber, answerPicked) {
     
     if (correctAns === answerPicked) {
         console.log('Correct answer');
+        incrementCorrectAnswers();
     } else {
         console.log('Incorrect answer');
     }
@@ -60,6 +61,9 @@ function checkAnswer(questionNumber, answerPicked) {
 }
 
 function incrementCorrectAnswers() {
+    let currentScore = 0;
+    currentScore++;
+    document.getElementById('correct-answers').innerText = currentScore;
 
 }
 

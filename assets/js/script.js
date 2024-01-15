@@ -23,21 +23,35 @@ function setAnswers(num) {
     displayAnswers[0].innerText = questions[num].answers[0];
     displayAnswers[1].innerText = questions[num].answers[1];
     displayAnswers[2].innerText = questions[num].answers[2];
+    let questionNum = num;
+    checkAnswerClicked(num);
 }
 
-function checkAnswerClicked() {
+function checkAnswerClicked(questionNum) {
     let answerBox1 = document.getElementById('answer1');
     let answerBox2 = document.getElementById('answer2');
     let answerBox3 = document.getElementById('answer3');
+    let answerClicked = 0;
+    let currentQuestion = questionNum;
 
-    
-        if (answerBox1.addEventListener('click', function(){
-            let answerClicked = 1;
-        }))
+    answerBox1.addEventListener('click', function(){
+        answerClicked = 1;
+    })
+
+    answerBox2.addEventListener('click', function(){
+        answerClicked = 2;
+    })
+
+    answerBox3.addEventListener('click', function(){
+        answerClicked = 3;
+    })
+    // checkAnswer(currentQuestion, answerClicked);
+    console.log(questionNum);
+    console.log(answerClicked);
     
 }
 
-function checkAnswer() {
+function checkAnswer(answer) {
     
 
 }

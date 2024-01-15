@@ -1,3 +1,4 @@
+const displayAnswers = document.getElementsByClassName('answers');
 
 function startQuiz() {
     let nextQuestion = document.getElementById('nextQ');
@@ -18,12 +19,9 @@ function pickQuestion() {
 }
 
 function setAnswers(num) {
-    let displayAnswers = document.getElementsByClassName('answers');
-
     displayAnswers[0].innerText = questions[num].answers[0];
     displayAnswers[1].innerText = questions[num].answers[1];
     displayAnswers[2].innerText = questions[num].answers[2];
-    let questionNum = num;
     checkAnswerClicked(num);
 }
 
@@ -32,30 +30,32 @@ function checkAnswerClicked(questionNum) {
     let answerBox2 = document.getElementById('answer2');
     let answerBox3 = document.getElementById('answer3');
     let answerClicked = 0;
-    let currentQuestion = questionNum;
-
+    
     answerBox1.addEventListener('click', function(){
         answerClicked = parseInt(document.getElementById('answer1').innerText);
-        console.log(answerClicked);
+        checkAnswer(questionNum, answerClicked); 
     })
 
     answerBox2.addEventListener('click', function(){
         answerClicked = parseInt(document.getElementById('answer2').innerText);
-        console.log(answerClicked);
+        checkAnswer(questionNum, answerClicked);
     })
 
     answerBox3.addEventListener('click', function(){
         answerClicked = parseInt(document.getElementById('answer3').innerText);
-        console.log(answerClicked);
-    })
-    // checkAnswer(currentQuestion, answerClicked);
-    console.log(questionNum);
-    
+        checkAnswer(questionNum, answerClicked);
+    })   
     
 }
 
-function checkAnswer(answer) {
+function checkAnswer(questionNumber, answerPicked) {
+    let correctAns = questions[questionNumber].correctAnswer;
     
+    if (correctAns === answerPicked) {
+        console.log('Correct answer');
+    } else {
+        console.log('Incorrect answer');
+    }
 
 }
 

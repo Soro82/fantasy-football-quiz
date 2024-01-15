@@ -35,19 +35,22 @@ function checkAnswerClicked(questionNum) {
     let currentQuestion = questionNum;
 
     answerBox1.addEventListener('click', function(){
-        answerClicked = 1;
+        answerClicked = parseInt(document.getElementById('answer1').innerText);
+        console.log(answerClicked);
     })
 
     answerBox2.addEventListener('click', function(){
-        answerClicked = 2;
+        answerClicked = parseInt(document.getElementById('answer2').innerText);
+        console.log(answerClicked);
     })
 
     answerBox3.addEventListener('click', function(){
-        answerClicked = 3;
+        answerClicked = parseInt(document.getElementById('answer3').innerText);
+        console.log(answerClicked);
     })
     // checkAnswer(currentQuestion, answerClicked);
     console.log(questionNum);
-    console.log(answerClicked);
+    
     
 }
 

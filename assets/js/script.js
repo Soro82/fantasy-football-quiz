@@ -20,12 +20,13 @@ function checkName() {
         warning.innerText = 'You have not entered a name.';
         checkName();
     } else {
+        questionArea.style.display = 'block';
+        welcomeArea.style.display = 'none';
         startQuiz(name);
     }
 }
 
 function startQuiz(player) {
-    questionArea.style.display = 'block';
     document.getElementById('name').innerText = player;
     document.getElementById('question-num').innerText = 1;
     let nextQuestion = document.getElementById('nextQ');

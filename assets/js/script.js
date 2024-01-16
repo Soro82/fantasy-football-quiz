@@ -1,7 +1,14 @@
+
 const displayAnswers = document.getElementsByClassName('answers');
+const questionArea = document.getElementsByClassName('question-area')[0];
 let numArray = [];
 let questionNumDisplay = 0;
 let currentScore = 0;
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    questionArea.style.display = 'none';
+})
 
 function startQuiz() {
     document.getElementById('question-num').innerText = 1;

@@ -17,19 +17,6 @@ h1 {
     margin: 20px;
 }
 
-.close {
-    float: right;
-    color: rgb(213, 17, 59);
-    font-size: 50px;
-    font: bold;
-}
-
-.close:hover, 
-.close:focus {
-    color: black;
-    cursor: pointer;
-}
-
 .question-area {
     border: 2px solid;
     display: flex;

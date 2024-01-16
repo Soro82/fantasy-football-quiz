@@ -8,17 +8,16 @@
 </head>
 <body>
     <h1>Fantasy Football Quiz</h1>
-    <div class="welcome">
-        <span class="close">&times;</span>
+    <div class="welcome-area">
         <h3>Welcome to the Fantasy Football Quiz</h3>
-        <p>Please enter your name and click on Start.</p>
-        <label for="name">Name</label>
+        <p id="welcome-par">Please enter your name and click on Start.</p>
+        <label for="name">Name</label><br>
         <input type="text" name="name" id="name">
         <button type="submit" id="start">Start</button>
     </div>
 
     <div class="question-area">
-        <p><span id="name"></span> your score is <span id="correct-answers">0</span> out of 5.</p>
+        <p><span id="users-name"></span> your score is <span id="correct-answers">0</span> out of 5.</p>
         <h2>Question <span id="question-num">1</span></h2>
         <p id="question">Your first question is..."</p>
         <div id="answers-area">

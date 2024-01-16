@@ -2,6 +2,28 @@ h1 {
     text-align: center;
 }
 
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+#name, #start {
+    width: 60%;
+    height: 30px;
+    margin: 20px;
+}
+
+.close {
+    float: right;
+    color: darkgrey;
+    font-size: 30px;
+    font: bold;
+}
+
 .question-area {
     border: 2px solid;
     display: flex;

@@ -24,4 +24,19 @@ const questions = [
         answers: [3,4,5],
         correctAnswer: 4
     },
+    {
+        question: "How many points does a goalkeeper get for a clean sheet?",
+        answers: [3,4,5],
+        correctAnswer: 4
+    },
+    {
+        question: "How many points does a goalkeeper get for a penalty save?",
+        answers: [3,4,5],
+        correctAnswer: 5
+    },
+    {
+        question: "How many points does a player get for missing a penalty?",
+        answers: [-1,-2,-3],
+        correctAnswer: -2
+    },
 ]

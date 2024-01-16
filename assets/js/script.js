@@ -20,8 +20,8 @@ startQuiz();
  * Picks a random question from the questions array and checks to see if it was asked previously
  */
 function pickQuestion() {
-    // generate random number between 0 and 4
-    let num = Math.floor(Math.random() * 5);
+    // generate random number between 0 and 7
+    let num = Math.floor(Math.random() * 8);
     
     if (numArray.includes(num)) {
         pickQuestion();
@@ -29,7 +29,7 @@ function pickQuestion() {
         let question = questions[num].question;
         document.getElementById('question').innerText = question;
         questionNumDisplay++;
-        if (questionNumDisplay >= 3) {
+        if (questionNumDisplay >= 6) {
             endQuiz();
         }
 

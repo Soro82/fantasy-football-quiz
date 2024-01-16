@@ -1,7 +1,7 @@
 
 const displayAnswers = document.getElementsByClassName('answers');
 const questionArea = document.getElementsByClassName('question-area')[0];
-
+const welcomeArea = document.getElementsByClassName('welcome-area')[0];
 const start = document.getElementById('start');
 let numArray = [];
 let questionNumDisplay = 0;
@@ -14,9 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 function checkName() {
-    let name = document.getElementById('name');
+    let name = document.getElementById('name').value;
+    let warning = document.getElementById('warning-message');
     if  (name === '') {
-        alert('Please enter your name.');
+        warning.innerText = 'You have not entered a name.';
         checkName();
     } else {
         startQuiz(name);

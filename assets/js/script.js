@@ -1,6 +1,8 @@
 
 const displayAnswers = document.getElementsByClassName('answers');
 const questionArea = document.getElementsByClassName('question-area')[0];
+
+const start = document.getElementById('start');
 let numArray = [];
 let questionNumDisplay = 0;
 let currentScore = 0;
@@ -8,9 +10,22 @@ let currentScore = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
+    start.addEventListener('click', checkName);
 })
 
-function startQuiz() {
+function checkName() {
+    let name = document.getElementById('name');
+    if  (name === '') {
+        alert('Please enter your name.');
+        checkName();
+    } else {
+        startQuiz(name);
+    }
+}
+
+function startQuiz(player) {
+    questionArea.style.display = 'block';
+    document.getElementById('name').innerText = player;
     document.getElementById('question-num').innerText = 1;
     let nextQuestion = document.getElementById('nextQ');
     nextQuestion.addEventListener('click', function(){

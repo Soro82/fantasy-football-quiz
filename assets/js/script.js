@@ -11,6 +11,7 @@ function startQuiz() {
         document.getElementById('answer1').style.backgroundColor = 'plum';
         document.getElementById('answer2').style.backgroundColor = 'plum';
         document.getElementById('answer3').style.backgroundColor = 'plum';
+        document.getElementById('question-response').innerText = "";
     })
 }
 
@@ -29,7 +30,7 @@ function pickQuestion() {
         let question = questions[num].question;
         document.getElementById('question').innerText = question;
         questionNumDisplay++;
-        if (questionNumDisplay >= 6) {
+        if (questionNumDisplay >= 5) {
             endQuiz();
         }
 
@@ -84,7 +85,8 @@ function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
     if (correctAns === answerPicked) {
         document.getElementById('question-response').innerText = "Correct answer. Well done.";
         document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'green';
-        incrementCorrectAnswers();
+        currentScore++;
+        document.getElementById('correct-answers').innerText = currentScore;
     } else {
         document.getElementById('question-response').innerText = "Incorrect answer. Better luck next time.";
         document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'red';
@@ -92,10 +94,7 @@ function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
 
 }
 
-function incrementCorrectAnswers() {
-
-    currentScore++;
-    document.getElementById('correct-answers').innerText = currentScore;
+function incrementCorrectAnswers() {   
 
 }
 

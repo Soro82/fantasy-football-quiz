@@ -1,4 +1,5 @@
 
+document.getElementById('nextQ').addEventListener('click', nextQuestion);
 const displayAnswers = document.getElementsByClassName('answers');
 const questionArea = document.getElementsByClassName('question-area')[0];
 const welcomeArea = document.getElementsByClassName('welcome-area')[0];
@@ -106,14 +107,12 @@ function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
 }
 
 function nextQuestion() {
-    let nextQuestion = document.getElementById('nextQ');
-    nextQuestion.addEventListener('click', function(){
-        pickQuestion();
-        document.getElementById('answer1').style.backgroundColor = 'plum';
-        document.getElementById('answer2').style.backgroundColor = 'plum';
-        document.getElementById('answer3').style.backgroundColor = 'plum';
-        document.getElementById('question-response').innerText = "";
-    })
+    pickQuestion();
+    document.getElementById('answer1').style.backgroundColor = 'plum';
+    document.getElementById('answer2').style.backgroundColor = 'plum';
+    document.getElementById('answer3').style.backgroundColor = 'plum';
+    document.getElementById('question-response').innerText = "";
+    
 }
 
 function endQuiz() {

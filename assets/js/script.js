@@ -20,8 +20,8 @@ function checkName() {
         warning.innerText = 'You have not entered a name.';
         start.addEventListener('click', checkName);
     } else {
-        document.getElementById('name').innerText = name;
-        document.getElementById('question-num').innerText = 1;
+        // document.getElementById('name').innerText = name;
+        // document.getElementById('question-num').innerText = 1;
         questionArea.style.display = 'block';
         welcomeArea.style.display = 'none';
         pickQuestion();

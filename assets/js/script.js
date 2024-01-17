@@ -1,9 +1,10 @@
 
 document.getElementById('nextQ').addEventListener('click', nextQuestion);
+document.getElementById('start').addEventListener('click', checkName);
 const displayAnswers = document.getElementsByClassName('answers');
 const questionArea = document.getElementsByClassName('question-area')[0];
 const welcomeArea = document.getElementsByClassName('welcome-area')[0];
-const start = document.getElementById('start');
+
 let numArray = [];
 let questionNumDisplay = 0;
 let currentScore = 0;
@@ -11,7 +12,6 @@ let currentScore = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
-    start.addEventListener('click', checkName);
 })
 
 function checkName() {

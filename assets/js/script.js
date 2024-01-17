@@ -20,26 +20,13 @@ function checkName() {
         warning.innerText = 'You have not entered a name.';
         checkName();
     } else {
+        document.getElementById('name').innerText = name;
+        document.getElementById('question-num').innerText = 1;
         questionArea.style.display = 'block';
         welcomeArea.style.display = 'none';
-        startQuiz(name);
+        pickQuestion();
     }
 }
-
-function startQuiz(player) {
-    document.getElementById('name').innerText = player;
-    document.getElementById('question-num').innerText = 1;
-    let nextQuestion = document.getElementById('nextQ');
-    nextQuestion.addEventListener('click', function(){
-        pickQuestion();
-        document.getElementById('answer1').style.backgroundColor = 'plum';
-        document.getElementById('answer2').style.backgroundColor = 'plum';
-        document.getElementById('answer3').style.backgroundColor = 'plum';
-        document.getElementById('question-response').innerText = "";
-    })
-}
-
-startQuiz();
 
 /**
  * Picks a random question from the questions array and checks to see if it was asked previously
@@ -123,7 +110,14 @@ function incrementCorrectAnswers() {
 }
 
 function nextQuestion() {
-    // document.getElementById('question-num').innerText += 1;
+    let nextQuestion = document.getElementById('nextQ');
+    nextQuestion.addEventListener('click', function(){
+        pickQuestion();
+        document.getElementById('answer1').style.backgroundColor = 'plum';
+        document.getElementById('answer2').style.backgroundColor = 'plum';
+        document.getElementById('answer3').style.backgroundColor = 'plum';
+        document.getElementById('question-response').innerText = "";
+    })
 }
 
 function endQuiz() {

@@ -18,7 +18,7 @@ function checkName() {
     let warning = document.getElementById('warning-message');
     if  (name === '') {
         warning.innerText = 'You have not entered a name.';
-        checkName();
+        start.addEventListener('click', checkName);
     } else {
         document.getElementById('name').innerText = name;
         document.getElementById('question-num').innerText = 1;

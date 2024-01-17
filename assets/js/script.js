@@ -102,11 +102,7 @@ function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
         document.getElementById('question-response').innerText = "Incorrect answer. Better luck next time.";
         document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'red';
     }
-
-}
-
-function incrementCorrectAnswers() {   
-
+    nextQuestion();
 }
 
 function nextQuestion() {

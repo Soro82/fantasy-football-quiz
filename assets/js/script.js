@@ -71,6 +71,7 @@ function setAnswers(num) {
  * Checks which answer the user clicked on and sends it to the checkAnswer function.
  */
 function checkAnswerClicked(questionNum) {
+    // let answerBox = document.getElementsByClassName('answers');
     let answerBox1 = document.getElementById('answer1');
     let answerBox2 = document.getElementById('answer2');
     let answerBox3 = document.getElementById('answer3');

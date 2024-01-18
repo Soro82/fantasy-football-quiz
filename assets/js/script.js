@@ -11,6 +11,7 @@ let currentScore = 0;
 document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
     start.addEventListener('click', checkName);
+    document.getElementById('nextQ').addEventListener('click', nextQuestion);
 })
 
 function checkName() {
@@ -104,18 +105,15 @@ function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
         document.getElementById('question-response').innerText = "Incorrect answer. Better luck next time.";
         document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'red';
     }
-    nextQuestion();
 }
 
 function nextQuestion() {
-    let nextQuestion = document.getElementById('nextQ');
-    nextQuestion.addEventListener('click', function(){
         pickQuestion();
         document.getElementById('answer1').style.backgroundColor = 'plum';
         document.getElementById('answer2').style.backgroundColor = 'plum';
         document.getElementById('answer3').style.backgroundColor = 'plum';
         document.getElementById('question-response').innerText = "";
-    })
+    
 }
 
 function endQuiz() {

@@ -49,7 +49,8 @@ function pickQuestion() {
         }
 
         numArray.push(num);
-        setAnswers(num);        
+        setAnswers(num); 
+        document.getElementById('nextQ').disabled = true;       
         
     }
     
@@ -102,9 +103,11 @@ function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
         document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'green';
         currentScore++;
         document.getElementById('correct-answers').innerText = currentScore;
+        document.getElementById('nextQ').disabled = false;
     } else {
         document.getElementById('question-response').innerText = "Incorrect answer. Better luck next time.";
         document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'red';
+        document.getElementById('nextQ').disabled = false;
     }
 }
 

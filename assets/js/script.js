@@ -16,13 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function checkName() {
     let name = document.getElementById('name').value;
+    
     let warning = document.getElementById('warning-message');
     if  (name === '') {
         warning.innerText = 'You have not entered a name.';
         start.addEventListener('click', checkName);
     } else {
-        // document.getElementById('name').innerText = name;
-        // document.getElementById('question-num').innerText = 1;
+        let capName = name.charAt(0).toUpperCase() + name.slice(1);
+        document.getElementById('users-name').innerText = capName;
         questionArea.style.display = 'block';
         welcomeArea.style.display = 'none';
         pickQuestion();
@@ -50,7 +51,7 @@ function pickQuestion() {
 
         numArray.push(num);
         setAnswers(num); 
-        document.getElementById('nextQ').disabled = true;       
+               
         
     }
     
@@ -103,11 +104,9 @@ function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
         document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'green';
         currentScore++;
         document.getElementById('correct-answers').innerText = currentScore;
-        document.getElementById('nextQ').disabled = false;
     } else {
         document.getElementById('question-response').innerText = "Incorrect answer. Better luck next time.";
         document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'red';
-        document.getElementById('nextQ').disabled = false;
     }
 }
 

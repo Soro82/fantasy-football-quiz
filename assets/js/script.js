@@ -36,8 +36,6 @@ function checkName() {
 function pickQuestion() {
     // generate random number between 0 and 7
     let num = Math.floor(Math.random() * 8);
-    console.log(num);
-    console.log(numArray);
     
     if (numArray.includes(num)) {
         pickQuestion();
@@ -73,11 +71,25 @@ function setAnswers(num) {
  * Checks which answer the user clicked on and sends it to the checkAnswer function.
  */
 function checkAnswerClicked(questionNum) {
-    // let answerBox = document.getElementsByClassName('answers');
+    let answerClicked = 0;
+    // let boxNum = 0;
+
+    //  let answerBox = document.getElementsByClassName('answers');
+
+    // for (i = 0; i < 3;i++){
+    //     answerBox[i].addEventListener('click', function() {
+    //         boxNum = i + 1;
+    //         answerClicked = answerBox[i].innerText;
+            
+
+    //     })
+    // }
+    // checkAnswer(questionNum, answerClicked, boxNum);
+
     let answerBox1 = document.getElementById('answer1');
     let answerBox2 = document.getElementById('answer2');
     let answerBox3 = document.getElementById('answer3');
-    let answerClicked = 0;
+    
     
     answerBox1.addEventListener('click', function(){
         answerClicked = parseInt(document.getElementById('answer1').innerText);
@@ -93,7 +105,7 @@ function checkAnswerClicked(questionNum) {
         answerClicked = parseInt(document.getElementById('answer3').innerText);
         checkAnswer(questionNum, answerClicked, 3);
     })   
-    
+
 }
 
 function checkAnswer(questionNumber, answerPicked, answerBoxNum) {

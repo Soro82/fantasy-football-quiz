@@ -1,6 +1,7 @@
 
 body {
     background-color: plum;
+    text-align: center;
 }
 
 h1, h2 {
@@ -46,8 +47,8 @@ h1, h2 {
 
 #answers-area {
     display: flex;
-    flex-direction: row;
     margin: 1rem;
+    justify-content: center;
 }
 
 .answers {
@@ -62,5 +63,5 @@ h1, h2 {
 
 #nextQ {
     height: 50px;
-    
+    justify-self: center;
 }

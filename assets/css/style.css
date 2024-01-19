@@ -14,6 +14,8 @@ h1, h2 {
     width: 80%;
     padding: 20px;
     margin: 10px auto;
+    border: 2px solid;
+    border-radius: 15px;
 }
 
 #name, #start {
@@ -26,6 +28,7 @@ h1, h2 {
 .question-area {
     background-color: aliceblue;
     border: 2px solid;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +38,6 @@ h1, h2 {
 
 .question-area h2 {
     margin: 5px;
-    align-self: center;
 }
 
 .question-area p {
@@ -46,14 +48,19 @@ h1, h2 {
     display: flex;
     flex-direction: row;
     margin: 1rem;
-    
 }
 
 .answers {
     margin: 5px;
     border: 1px solid black;
+    border-radius: 10px;
     width: 60px;
     height: 20px;
     text-align: center;
     background-color: plum;
+}
+
+#nextQ {
+    height: 50px;
+    
 }

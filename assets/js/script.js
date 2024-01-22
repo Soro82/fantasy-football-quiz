@@ -6,22 +6,23 @@ const start = document.getElementById('start');
 let numArray = [];
 let questionNumDisplay = 0;
 let currentScore = 0;
-let questions = easyQuestions;
+let questions = [...easyQuestions];
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
-    // document.getElementById('hard').addEventListener('click', function() {
-    //     questions = hardQuestions;
-    // })
+    document.getElementById('hard').addEventListener('click', function() {
+        questions = hardQuestions;
+    })
     start.addEventListener('click', checkName);
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
-    document.getElementById('playAgain').addEventListener('click', resetGame);
+    // document.getElementById('playAgain').addEventListener('click', resetGame);
 })
 
 function checkName() {
     let name = document.getElementById('name').value;
-    console.log(currentScore);
+
     let warning = document.getElementById('warning-message');
     if  (name === '') {
         warning.innerText = 'You have not entered a name.';
@@ -105,9 +106,6 @@ function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
         document.getElementById('question-response').innerText = "Incorrect answer. Better luck next time.";
         document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'red';
     }
-    // console.log(currentScore);
-    // console.log(correctAns);
-    // console.log(answerPicked);
 }
 
 function nextQuestion() {
@@ -134,8 +132,7 @@ function resetGame() {
     questionNumDisplay = 0;
     currentScore = 0;
     prevQuestionNum = 0;
-    questions = [];
-    questions = easyQuestions;
+    questions = [...easyQuestions]; //rebuild questions array
     document.getElementById('answer1').style.backgroundColor = 'plum';
     document.getElementById('answer2').style.backgroundColor = 'plum';
     document.getElementById('answer3').style.backgroundColor = 'plum';
@@ -144,5 +141,6 @@ function resetGame() {
     document.getElementById('nextQ').disabled = false;
     questionArea.style.display = 'none';
     welcomeArea.style.display = 'block';  
-    
+    console.log(questionNumDisplay);
+    console.log(currentScore);
 }

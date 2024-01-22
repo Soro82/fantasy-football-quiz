@@ -78,7 +78,6 @@ function setAnswers(num) {
  * Checks which answer the user clicked on and sends it to the checkAnswer function.
  */
 function checkAnswerClicked(questionNum) {
-    let answerClicked = 0;
     let answerBoxes = document.getElementsByClassName('answers');
 
     for (let i = 0; i < 3; i++) {
@@ -130,6 +129,7 @@ function resetGame() {
     numArray = [];
     questionNumDisplay = 0;
     currentScore = 0;
+    prevQuestionNum = 0;
     document.getElementById('answer1').style.backgroundColor = 'plum';
     document.getElementById('answer2').style.backgroundColor = 'plum';
     document.getElementById('answer3').style.backgroundColor = 'plum';

@@ -36,6 +36,24 @@ label {
     border-radius: 10px;
 }
 
+#difficulty {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.difficulty-levels {
+    display: flex;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(28, 237, 87);
+    padding: 5px;
+
+}
+
 #start {
     height: 40px;
     width: 150px;

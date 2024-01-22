@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     start.addEventListener('click', checkName);
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
     // document.getElementById('playAgain').addEventListener('click', resetGame);
+    document.getElementById('results').disabled = true;   
 })
 
 function checkName() {
@@ -120,7 +121,7 @@ function nextQuestion() {
 
 function endQuiz() {
     document.getElementById('nextQ').disabled = true;
-    
+    document.getElementById('results').disabled = false;    
 }
 
 function showResult() {

@@ -101,7 +101,7 @@ label {
     background-color: plum;
 }
 
-#nextQ, #playAgain {
+#nextQ, #playAgain, #results {
     height: 40px;
     width: 150px;
     border-radius: 10px;

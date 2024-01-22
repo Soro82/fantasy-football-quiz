@@ -6,10 +6,12 @@ const start = document.getElementById('start');
 let numArray = [];
 let questionNumDisplay = 0;
 let currentScore = 0;
+let questions = easyQuestions;
 
 
 document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
+    
     start.addEventListener('click', checkName);
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
     document.getElementById('playAgain').addEventListener('click', resetGame);
@@ -35,6 +37,9 @@ function checkName() {
  * Picks a random question from the questions array and checks to see if it was asked previously
  */
 function pickQuestion() {
+    document.getElementById('hard').addEventListener('click', function() {
+        questions = hardQuestions;
+    })
      // Reset the correctAnswer property of the previous question
      if (numArray.length > 0) {
         let prevQuestionNum = numArray[numArray.length - 1];

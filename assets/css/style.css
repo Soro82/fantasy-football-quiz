@@ -49,9 +49,13 @@ label {
     border-radius: 10px;
     width: 70px;
     height: 30px;
-    background-color: rgb(28, 237, 87);
+    background-color: rgb(53, 124, 216);
     padding: 5px;
 
+}
+
+.difficulty-levels:hover {
+    background-color: rgb(19, 251, 19);
 }
 
 #start {

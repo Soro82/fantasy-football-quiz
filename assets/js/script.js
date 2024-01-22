@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
     start.addEventListener('click', checkName);
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
-    // document.getElementById('playAgain').addEventListener('click', resetGame);
+    document.getElementById('playAgain').addEventListener('click', resetGame);
 })
 
 function checkName() {
@@ -124,9 +124,14 @@ function resetGame() {
     numArray = [];
     questionNumDisplay = 0;
     currentScore = 0;
+    document.getElementById('answer1').style.backgroundColor = 'plum';
+    document.getElementById('answer2').style.backgroundColor = 'plum';
+    document.getElementById('answer3').style.backgroundColor = 'plum';
+    document.getElementById('question-response').innerText = "";
+    document.getElementById('correct-answers').innerText = 0;
+    document.getElementById('nextQ').disabled = false;
     questionArea.style.display = 'none';
     welcomeArea.style.display = 'block';
     start.addEventListener('click', checkName);   
-    console.log(currentScore);
-    console.log(questionNumDisplay);
+
 }

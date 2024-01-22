@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
     start.addEventListener('click', checkName);
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
+    document.getElementById('playAgain').addEventListener('click', resetGame);
 })
 
 function checkName() {
@@ -141,5 +142,13 @@ function showResult() {
 }
 
 function resetGame() {
+    questionArea.style.display = 'none';
+    welcomeArea.style.display = 'block';
+    start.addEventListener('click', checkName);
+
+    document.getElementById('nextQ').addEventListener('click', nextQuestion);
+    numArray = [];
+    questionNumDisplay = 0;
+    currentScore = 0;
 
 }

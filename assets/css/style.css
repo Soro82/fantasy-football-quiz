@@ -79,8 +79,9 @@ label {
     background-color: plum;
 }
 
-#nextQ {
+#nextQ, #playAgain {
     height: 40px;
     width: 150px;
     border-radius: 10px;
+    margin: 10px;
 }

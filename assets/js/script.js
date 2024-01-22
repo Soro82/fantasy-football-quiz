@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     start.addEventListener('click', checkName);
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
-    // document.getElementById('playAgain').addEventListener('click', resetGame);
+    document.getElementById('playAgain').addEventListener('click', resetGame);
     document.getElementById('results').disabled = true;   
 })
 
@@ -159,6 +159,4 @@ function resetGame() {
     questionArea.style.display = 'none';
     resultsArea.style.display = 'none';
     welcomeArea.style.display = 'block';  
-    console.log(questionNumDisplay);
-    console.log(currentScore);
 }

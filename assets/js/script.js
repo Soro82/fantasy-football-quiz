@@ -11,7 +11,9 @@ let questions = easyQuestions;
 
 document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
-    
+    // document.getElementById('hard').addEventListener('click', function() {
+    //     questions = hardQuestions;
+    // })
     start.addEventListener('click', checkName);
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
     document.getElementById('playAgain').addEventListener('click', resetGame);
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function checkName() {
     let name = document.getElementById('name').value;
-    
+    console.log(currentScore);
     let warning = document.getElementById('warning-message');
     if  (name === '') {
         warning.innerText = 'You have not entered a name.';
@@ -37,9 +39,6 @@ function checkName() {
  * Picks a random question from the questions array and checks to see if it was asked previously
  */
 function pickQuestion() {
-    document.getElementById('hard').addEventListener('click', function() {
-        questions = hardQuestions;
-    })
      // Reset the correctAnswer property of the previous question
      if (numArray.length > 0) {
         let prevQuestionNum = numArray[numArray.length - 1];
@@ -135,6 +134,8 @@ function resetGame() {
     questionNumDisplay = 0;
     currentScore = 0;
     prevQuestionNum = 0;
+    questions = [];
+    questions = easyQuestions;
     document.getElementById('answer1').style.backgroundColor = 'plum';
     document.getElementById('answer2').style.backgroundColor = 'plum';
     document.getElementById('answer3').style.backgroundColor = 'plum';
@@ -142,7 +143,6 @@ function resetGame() {
     document.getElementById('correct-answers').innerText = 0;
     document.getElementById('nextQ').disabled = false;
     questionArea.style.display = 'none';
-    welcomeArea.style.display = 'block';
-    start.addEventListener('click', checkName);   
+    welcomeArea.style.display = 'block';  
     
 }

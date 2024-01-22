@@ -35,6 +35,12 @@ function checkName() {
  * Picks a random question from the questions array and checks to see if it was asked previously
  */
 function pickQuestion() {
+     // Reset the correctAnswer property of the previous question
+     if (numArray.length > 0) {
+        let prevQuestionNum = numArray[numArray.length - 1];
+        questions[prevQuestionNum].correctAnswer = null;
+    }
+
     // generate random number between 0 and 7
     let num = Math.floor(Math.random() * 8);
     

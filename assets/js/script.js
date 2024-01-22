@@ -81,7 +81,7 @@ function checkAnswerClicked(questionNum) {
             checkAnswer(questionNum, answerClicked, i + 1);
         });
     } 
-
+    
 }
 
 function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
@@ -133,5 +133,5 @@ function resetGame() {
     questionArea.style.display = 'none';
     welcomeArea.style.display = 'block';
     start.addEventListener('click', checkName);   
-
+    
 }

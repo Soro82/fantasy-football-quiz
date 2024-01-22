@@ -2,6 +2,7 @@
 const displayAnswers = document.getElementsByClassName('answers');
 const questionArea = document.getElementsByClassName('question-area')[0];
 const welcomeArea = document.getElementsByClassName('welcome-area')[0];
+const resultsArea = document.getElementsByClassName('results-area')[0];
 const start = document.getElementById('start');
 let numArray = [];
 let questionNumDisplay = 0;
@@ -12,6 +13,7 @@ let questions = [...easyQuestions];
 
 document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
+    resultsArea.style.display = 'none';
     document.getElementById('hard').addEventListener('click', function() {
         questions = hardQuestions;
     })
@@ -121,11 +123,24 @@ function nextQuestion() {
 
 function endQuiz() {
     document.getElementById('nextQ').disabled = true;
-    document.getElementById('results').disabled = false;    
+    document.getElementById('results').disabled = false;
+    document.getElementById('results').addEventListener('click', showResult)    
 }
 
 function showResult() {
-
+    questionArea.style.display = 'none';
+    resultsArea.style.display = 'block';
+    let resultsMessage = document.getElementById('results-message');
+    let userName = document.getElementById('name').value;
+    if (currentScore < 3) {
+        resultsMessage.innerText = `Hard luck ${userName}. You scored ${currentScore} out of 5. You are in the relegation zone.`;
+    } else if (currentScore === 3) {
+        resultsMessage.innerText = `Well played ${userName}. You scored ${currentScore} out of 5. That was a mid-table performance.`;
+    } else if (currentScore === 4) {
+        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. You are in the Champions League places.`;
+    } else {
+        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. You won the Premier League.`;
+    }
 }
 
 function resetGame() {

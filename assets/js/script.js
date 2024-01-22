@@ -141,6 +141,7 @@ function showResult() {
     } else {
         resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. You won the Premier League.`;
     }
+    document.getElementById('home-button').addEventListener('click', resetGame);
 }
 
 function resetGame() {
@@ -156,6 +157,7 @@ function resetGame() {
     document.getElementById('correct-answers').innerText = 0;
     document.getElementById('nextQ').disabled = false;
     questionArea.style.display = 'none';
+    resultsArea.style.display = 'none';
     welcomeArea.style.display = 'block';  
     console.log(questionNumDisplay);
     console.log(currentScore);

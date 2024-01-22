@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
     start.addEventListener('click', checkName);
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
-    document.getElementById('playAgain').addEventListener('click', resetGame);
+    // document.getElementById('playAgain').addEventListener('click', resetGame);
 })
 
 function checkName() {
@@ -73,39 +73,14 @@ function setAnswers(num) {
  */
 function checkAnswerClicked(questionNum) {
     let answerClicked = 0;
-    // let boxNum = 0;
+    let answerBoxes = document.getElementsByClassName('answers');
 
-    //  let answerBox = document.getElementsByClassName('answers');
-
-    // for (i = 0; i < 3;i++){
-    //     answerBox[i].addEventListener('click', function() {
-    //         boxNum = i + 1;
-    //         answerClicked = answerBox[i].innerText;
-            
-
-    //     })
-    // }
-    // checkAnswer(questionNum, answerClicked, boxNum);
-
-    let answerBox1 = document.getElementById('answer1');
-    let answerBox2 = document.getElementById('answer2');
-    let answerBox3 = document.getElementById('answer3');
-    
-    
-    answerBox1.addEventListener('click', function(){
-        answerClicked = parseInt(document.getElementById('answer1').innerText);
-        checkAnswer(questionNum, answerClicked, 1); 
-    })
-
-    answerBox2.addEventListener('click', function(){
-        answerClicked = parseInt(document.getElementById('answer2').innerText);
-        checkAnswer(questionNum, answerClicked, 2);
-    })
-
-    answerBox3.addEventListener('click', function(){
-        answerClicked = parseInt(document.getElementById('answer3').innerText);
-        checkAnswer(questionNum, answerClicked, 3);
-    })   
+    for (let i = 0; i < 3; i++) {
+        answerBoxes[i].addEventListener('click', function() {
+            let answerClicked = parseInt(answerBoxes[i].innerText);
+            checkAnswer(questionNum, answerClicked, i + 1);
+        });
+    } 
 
 }
 
@@ -121,6 +96,9 @@ function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
         document.getElementById('question-response').innerText = "Incorrect answer. Better luck next time.";
         document.getElementById(`answer${answerBoxNum}`).style.backgroundColor = 'red';
     }
+    // console.log(currentScore);
+    // console.log(correctAns);
+    // console.log(answerPicked);
 }
 
 function nextQuestion() {
@@ -129,6 +107,7 @@ function nextQuestion() {
         document.getElementById('answer2').style.backgroundColor = 'plum';
         document.getElementById('answer3').style.backgroundColor = 'plum';
         document.getElementById('question-response').innerText = "";
+        
     
 }
 
@@ -142,13 +121,12 @@ function showResult() {
 }
 
 function resetGame() {
-    questionArea.style.display = 'none';
-    welcomeArea.style.display = 'block';
-    start.addEventListener('click', checkName);
-
-    document.getElementById('nextQ').addEventListener('click', nextQuestion);
     numArray = [];
     questionNumDisplay = 0;
     currentScore = 0;
-
+    questionArea.style.display = 'none';
+    welcomeArea.style.display = 'block';
+    start.addEventListener('click', checkName);   
+    console.log(currentScore);
+    console.log(questionNumDisplay);
 }

@@ -17,17 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
         questions = [...hardQuestions];
         document.getElementById('hard').style.backgroundColor = 'rgb(19, 251, 19)';
         document.getElementById('easy').style.backgroundColor = 'rgb(53, 124, 216)';
-    })
+    });
     document.getElementById('easy').addEventListener('click', function() {
         questions = [...easyQuestions];
         document.getElementById('easy').style.backgroundColor = 'rgb(19, 251, 19)';
         document.getElementById('hard').style.backgroundColor = 'rgb(53, 124, 216)';
-    })
+    });
     start.addEventListener('click', checkName);
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
     document.getElementById('playAgain').addEventListener('click', resetGame);
     document.getElementById('results').disabled = true;   
-})
+});
 
 function checkName() {
     let name = document.getElementById('name').value;
@@ -130,7 +130,7 @@ function nextQuestion() {
 function endQuiz() {
     document.getElementById('nextQ').disabled = true;
     document.getElementById('results').disabled = false;
-    document.getElementById('results').addEventListener('click', showResult)    
+    document.getElementById('results').addEventListener('click', showResult);    
 }
 
 function showResult() {
@@ -154,7 +154,6 @@ function resetGame() {
     numArray = [];
     questionNumDisplay = 0;
     currentScore = 0;
-    prevQuestionNum = 0;
     questions = [...easyQuestions]; //rebuild questions array
     document.getElementById('answer1').style.backgroundColor = 'plum';
     document.getElementById('answer2').style.backgroundColor = 'plum';

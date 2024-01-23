@@ -39,7 +39,7 @@ const easyQuestions = [
         answers: [-1,-2,-3],
         correctAnswer: -1
     },
-]
+];
 
 const hardQuestions = [
     {
@@ -82,4 +82,4 @@ const hardQuestions = [
         answers: [3,4,5],
         correctAnswer: 5
     },
-]
+];

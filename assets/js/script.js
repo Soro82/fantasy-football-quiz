@@ -7,15 +7,21 @@ const start = document.getElementById('start');
 let numArray = [];
 let questionNumDisplay = 0;
 let currentScore = 0;
-let questions = [...easyQuestions];
-
+let questions = [];
 
 
 document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
     resultsArea.style.display = 'none';
     document.getElementById('hard').addEventListener('click', function() {
-        questions = hardQuestions;
+        questions = [...hardQuestions];
+        document.getElementById('hard').style.backgroundColor = 'rgb(19, 251, 19)';
+        document.getElementById('easy').style.backgroundColor = 'rgb(53, 124, 216)';
+    })
+    document.getElementById('easy').addEventListener('click', function() {
+        questions = [...easyQuestions];
+        document.getElementById('easy').style.backgroundColor = 'rgb(19, 251, 19)';
+        document.getElementById('hard').style.backgroundColor = 'rgb(53, 124, 216)';
     })
     start.addEventListener('click', checkName);
     document.getElementById('nextQ').addEventListener('click', nextQuestion);

@@ -162,6 +162,7 @@ function resetGame() {
     document.getElementById('question-response').innerText = "";
     document.getElementById('correct-answers').innerText = 0;
     document.getElementById('nextQ').disabled = false;
+    document.getElementById('results').disabled = true;  
     questionArea.style.display = 'none';
     resultsArea.style.display = 'none';
     welcomeArea.style.display = 'block';  

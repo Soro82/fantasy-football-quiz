@@ -123,7 +123,7 @@ function nextQuestion() {
         document.getElementById('answer2').style.backgroundColor = 'plum';
         document.getElementById('answer3').style.backgroundColor = 'plum';
         document.getElementById('question-response').innerText = "";
-        
+        questions.splice(num, 1);
     
 }
 

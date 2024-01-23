@@ -17,3 +17,12 @@ The Fantasy Football Quiz is for people who play the Fantasy Premier League Fant
 
 ## User Stories
 
+* As a user I want to test my knowledge about the Fantasy Premier League Fantasy Football game.
+* As a user I want to be able to enter my name before I start the quiz.
+* As a user I want to be able to choose an answer from a selection of possible choices.
+* As a user I want to know if I got the question correct or incorrect.
+* As a user I want to how many questions I got correct as I go through the questions.
+* As a user I want to know my total score at the end of the game.
+
+## Wireframes
+

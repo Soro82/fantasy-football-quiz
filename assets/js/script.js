@@ -179,7 +179,7 @@ function showResult() {
         resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. 
         You are in the Champions League places!! Why not try again and see can you win the League.`;
     } else {
-        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. 
+        resultsMessage.innerText = `Congratulations ${userName}. You scored ${currentScore} out of 5. 
         You won the Premier League!!! Why not try again and see can you do it again.`;
     }
     //Calls the resetGame function when the Home button is clicked.

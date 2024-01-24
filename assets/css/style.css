@@ -106,11 +106,11 @@ label {
 }
 
 #results-message {
-    margin: 80px auto;
+    margin: 60px auto;
     border: 1px solid black;
     border-radius: 10px;
     width: 300px;
-    height: 80px;
+    height: 200px;
     font-size: 22px;
     background-color: aqua;
 }

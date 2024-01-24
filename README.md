@@ -26,3 +26,10 @@ The Fantasy Football Quiz is for people who play the Fantasy Premier League Fant
 
 ## Wireframes
 
+I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to plan the layout of the pages. I found this very useful when I started writing the code for the website.
+
+* Mobile View
+
+* Tablet View
+
+* Laptop/Desktop View

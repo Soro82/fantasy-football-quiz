@@ -169,13 +169,18 @@ function showResult() {
     let resultsMessage = document.getElementById('results-message');
     let userName = document.getElementById('name').value;
     if (currentScore < 3) {
-        resultsMessage.innerText = `Hard luck ${userName}. You scored ${currentScore} out of 5. You are in the relegation zone!`;
+        resultsMessage.innerText = `Hard luck ${userName}. You scored ${currentScore} out of 5. 
+        You are in the relegation zone! Why not try again and see can you move up the table.`;
     } else if (currentScore === 3) {
-        resultsMessage.innerText = `Well played ${userName}. You scored ${currentScore} out of 5. That was a mid-table performance!`;
+        resultsMessage.innerText = `Well played ${userName}. You scored ${currentScore} out of 5. 
+        That was a mid-table performance! Why not try again and see can you get into the Champions League
+        places.`;
     } else if (currentScore === 4) {
-        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. You are in the Champions League places!!`;
+        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. 
+        You are in the Champions League places!! Why not try again and see can you win the League.`;
     } else {
-        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. You won the Premier League!!!`;
+        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. 
+        You won the Premier League!!! Why not try again and see can you do it again.`;
     }
     //Calls the resetGame function when the Home button is clicked.
     document.getElementById('home-button').addEventListener('click', resetGame);

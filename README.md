@@ -33,6 +33,20 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 * Mobile View
 
+  * [Welcome Area](documentation/wireframes/mobile-welcome-area.png)
+  * [Question Area](documentation/wireframes/mobile-question-area.png)
+  * [Results Area](documentation/wireframes/mobile-result-area.png)
+
 * Tablet View
 
+  * [Welcome Area](documentation/wireframes/tablet-welcome-area.png)
+  * [Question Area](documentation/wireframes/tablet-question-area.png)
+  * [Results Area](documentation/wireframes/tablet-result-area.png)
+
 * Laptop/Desktop View
+
+  * [Welcome Area](documentation/wireframes/desktop-welcome-area.png)
+  * [Question Area](documentation/wireframes/desktop-question-area.png)
+  * [Results Area](documentation/wireframes/desktop-result-area.png)
+
+  

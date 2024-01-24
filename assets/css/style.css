@@ -106,6 +106,12 @@ label {
 }
 
 #results-message {
-    margin: 80px 20px;
+    margin: 80px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height: 80px;
+    font-size: 22px;
+    background-color: aqua;
 }
 

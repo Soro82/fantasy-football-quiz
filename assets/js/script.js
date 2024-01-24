@@ -1,4 +1,4 @@
-// Global variables to be passed between functions
+// Global variables to be used in multiple functions
 const displayAnswers = document.getElementsByClassName('answers');
 const questionArea = document.getElementsByClassName('question-area')[0];
 const welcomeArea = document.getElementsByClassName('welcome-area')[0];
@@ -7,7 +7,7 @@ const start = document.getElementById('start');
 let numArray = [];
 let questionNumDisplay = 0;
 let currentScore = 0;
-let questions = [];
+let questions = [...easyQuestions];
 
 /**
  * Runs when the quiz is opened/loaded and displays the welcome area to the user
@@ -15,6 +15,7 @@ let questions = [];
 document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
     resultsArea.style.display = 'none';
+    document.getElementById('easy').style.backgroundColor = 'rgb(19, 251, 19)';
     //checks to see what difficulty level the user chose.
     document.getElementById('hard').addEventListener('click', function() {
         questions = [...hardQuestions];
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
     //Runs the resetGame function when the user clicks Play Again.
     document.getElementById('playAgain').addEventListener('click', resetGame);
-    //disables the Results button until the quiz is finished.
+    //Disables the Results button until the quiz is finished.
     document.getElementById('results').disabled = true;   
 });
 
@@ -83,13 +84,9 @@ function pickQuestion() {
         }
 
         numArray.push(num);
-        setAnswers(num); 
-               
-        
-    }
-    
-    document.getElementById('question-num').innerText = questionNumDisplay;
-    
+        setAnswers(num);                   
+    }    
+    document.getElementById('question-num').innerText = questionNumDisplay;    
 }
 
 /**
@@ -111,11 +108,10 @@ function checkAnswerClicked(questionNum) {
 
     for (let i = 0; i < 3; i++) {
         answerBoxes[i].addEventListener('click', function() {
-            let answerClicked = parseInt(answerBoxes[i].innerText);
+            let answerClicked = questions[questionNum].answers[i];
             checkAnswer(questionNum, answerClicked, i + 1);
         });
-    } 
-    
+    }     
 }
 
 /**
@@ -173,13 +169,13 @@ function showResult() {
     let resultsMessage = document.getElementById('results-message');
     let userName = document.getElementById('name').value;
     if (currentScore < 3) {
-        resultsMessage.innerText = `Hard luck ${userName}. You scored ${currentScore} out of 5. You are in the relegation zone.`;
+        resultsMessage.innerText = `Hard luck ${userName}. You scored ${currentScore} out of 5. You are in the relegation zone!`;
     } else if (currentScore === 3) {
-        resultsMessage.innerText = `Well played ${userName}. You scored ${currentScore} out of 5. That was a mid-table performance.`;
+        resultsMessage.innerText = `Well played ${userName}. You scored ${currentScore} out of 5. That was a mid-table performance!`;
     } else if (currentScore === 4) {
-        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. You are in the Champions League places.`;
+        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. You are in the Champions League places!!`;
     } else {
-        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. You won the Premier League.`;
+        resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. You won the Premier League!!!`;
     }
     //Calls the resetGame function when the Home button is clicked.
     document.getElementById('home-button').addEventListener('click', resetGame);

@@ -4,6 +4,8 @@
 
 The Fantasy Football Quiz is for people who play the Fantasy Premier League Fantasy Football game. There are currently over 10 million players worldwide. The questions in the quiz are regarding what players get points for in the Fantasy Football game.
 
+![Am I Responsive view of website](documentation/testing/am-i-responsive.png)
+
 ## Table of Contents
 
 * [User Stories](#user-stories)
@@ -23,6 +25,7 @@ The Fantasy Football Quiz is for people who play the Fantasy Premier League Fant
 * As a user I want to know if I got the question correct or incorrect.
 * As a user I want to how many questions I got correct as I go through the questions.
 * As a user I want to know my total score at the end of the game.
+* As a user I want to be told how well I did and if I can improve.
 
 ## Wireframes
 

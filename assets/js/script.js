@@ -1,4 +1,4 @@
-
+// Global variables to be passed between functions
 const displayAnswers = document.getElementsByClassName('answers');
 const questionArea = document.getElementsByClassName('question-area')[0];
 const welcomeArea = document.getElementsByClassName('welcome-area')[0];
@@ -9,10 +9,13 @@ let questionNumDisplay = 0;
 let currentScore = 0;
 let questions = [];
 
-
+/**
+ * Runs when the quiz is opened/loaded and displays the welcome area to the user
+ */
 document.addEventListener('DOMContentLoaded', function() {
     questionArea.style.display = 'none';
     resultsArea.style.display = 'none';
+    //checks to see what difficulty level the user chose.
     document.getElementById('hard').addEventListener('click', function() {
         questions = [...hardQuestions];
         document.getElementById('hard').style.backgroundColor = 'rgb(19, 251, 19)';
@@ -23,12 +26,22 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('easy').style.backgroundColor = 'rgb(19, 251, 19)';
         document.getElementById('hard').style.backgroundColor = 'rgb(53, 124, 216)';
     });
+    //Runs the checkName function when the user clicks Start.
     start.addEventListener('click', checkName);
+    //Runs the nextQuestion function when the user clicks Next Question.
     document.getElementById('nextQ').addEventListener('click', nextQuestion);
+    //Runs the resetGame function when the user clicks Play Again.
     document.getElementById('playAgain').addEventListener('click', resetGame);
+    //disables the Results button until the quiz is finished.
     document.getElementById('results').disabled = true;   
 });
 
+/**
+ * Checks if the user entered their name and then displays their name in the Question area. 
+ * The welcome area is hidden and the question area is displayed.
+ * If they haven't entered their name a warning message is displayed and the quiz returns to 
+ * waiting for the Start button to be clicked.
+ */
 function checkName() {
     let name = document.getElementById('name').value;
 
@@ -46,7 +59,8 @@ function checkName() {
 }
 
 /**
- * Picks a random question from the questions array and checks to see if it was asked previously
+ * Picks a random question from the questions array and checks to see if it was asked previously.
+ * The question picked is displayed on the screen and the setAnswers function is called.
  */
 function pickQuestion() {
      // Reset the correctAnswer property of the previous question
@@ -79,7 +93,8 @@ function pickQuestion() {
 }
 
 /**
- * Displays the possible answers to the question picked in pickQuestion function
+ * Displays the possible answers to the question picked in pickQuestion function.
+ * The question picked was sent from the pickQuestion function.
  */
 function setAnswers(num) {
     displayAnswers[0].innerText = questions[num].answers[0];
@@ -103,6 +118,14 @@ function checkAnswerClicked(questionNum) {
     
 }
 
+/**
+ * Gets the correct answer to the question picked in the pickQuestion function and compares
+ * against the answer the user picked. If it's correct the answer box turns green otherwise it
+ * turns red. A message is displayed to inform the user if they were correct.
+ * @param {integer} questionNumber The question number that was picked randomly in the pickQuestion function.
+ * @param {integer} answerPicked The value displayed in the answer box picked by the user.
+ * @param {integer} answerBoxNum The number of the answer box picked.
+ */
 function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
     let correctAns = questions[questionNumber].correctAnswer;
     
@@ -117,22 +140,33 @@ function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
     }
 }
 
+/**
+ * Calls the pickQuestion function to display a new question.
+ */
 function nextQuestion() {
         pickQuestion();
         document.getElementById('answer1').style.backgroundColor = 'plum';
         document.getElementById('answer2').style.backgroundColor = 'plum';
         document.getElementById('answer3').style.backgroundColor = 'plum';
-        document.getElementById('question-response').innerText = "";
-        questions.splice(num, 1);
-    
+        document.getElementById('question-response').innerText = "";   
 }
 
+/**
+ * Runs when the user has answered the last question and listens for the Results button to be clicked.
+ * The Next Question button is disabled and the Results button is enabled.
+ */
 function endQuiz() {
     document.getElementById('nextQ').disabled = true;
     document.getElementById('results').disabled = false;
+    //Calls the showResult function when the Results button is clicked.
     document.getElementById('results').addEventListener('click', showResult);    
 }
 
+/**
+ * Displays the results area and hides the question area.
+ * Checks to see what score the user got and displays a message informing of it
+ * and a comment linked to their score.
+ */
 function showResult() {
     questionArea.style.display = 'none';
     resultsArea.style.display = 'block';
@@ -147,9 +181,15 @@ function showResult() {
     } else {
         resultsMessage.innerText = `Well done ${userName}. You scored ${currentScore} out of 5. You won the Premier League.`;
     }
+    //Calls the resetGame function when the Home button is clicked.
     document.getElementById('home-button').addEventListener('click', resetGame);
 }
 
+/**
+ * Resets the global variables to zero/empty and rebuilds the questions array.
+ * Resets the question area back to it's original state.
+ * Displays the welcome area and hides the results area and the question area.
+ */
 function resetGame() {
     numArray = [];
     questionNumDisplay = 0;

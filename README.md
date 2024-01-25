@@ -130,6 +130,26 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ## Responsiveness
 
+* The quiz was tested on mobile phone, tablet and desktop size screens and no issues were identified.
+* In the Features section you can see how it looks on mobile phone screen sizes.
+* On tablets and desktop screens sizes the border around the Welcome Area and the Question Area expands to a maximum width of 600 pixels.
+* The buttons in the Question Area are displayed in a column on mobile phone screens.
+* The buttons in the Question Area are displayed in a row on tablets and desktop screens.
+
+### Tablet Screen Size
+
+![Welcome Area in tablet view](documentation/screenshots/responsiveness/tablet-level-chosen.png)
+
+![Question Area in tablet view](documentation/screenshots/responsiveness/tablet-correct-answer.png)
+
+![Results Area in tablet view](documentation/screenshots/responsiveness/tablet-result-area.png)
+
+### Desktop Screen Size
+
+![Welcome Area in desktop view](documentation/screenshots/responsiveness/desktop-level-chosen.png)
+
+![Question Area in desktop view](documentation/screenshots/responsiveness/desktop-correct-answer.png)
+
 [Back to Top](#fantasy-football-quiz)
 
 ## Testing

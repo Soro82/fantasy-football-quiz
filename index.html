@@ -11,11 +11,14 @@
     <title>Fantasy Football Quiz</title>
 </head>
 <body>
+    <!-- The main heading for the quiz to be displayed in all areas. -->
     <h1>Fantasy Football Quiz</h1>
+    <!-- The Welcome Area to welcome the user to the quiz. -->
     <div class="welcome-area">
         <h2>Welcome to the Fantasy Football Quiz</h2>
         <p id="welcome-par">Please enter your name, pick a level of difficulty and click on Start.</p>
         <input type="text" name="name" id="name" aria-label="Enter your name here.">
+        <!-- The warning message that is displayed when the user has not entered a name. -->
         <p id="warning-message"></p>
         <div id="difficulty">
             <div id="easy" class="difficulty-levels">EASY</div>
@@ -24,21 +27,26 @@
         <button type="submit" id="start" class="buttons">START</button>
     </div>
 
+    <!-- The Question Area to display the questions and the answers to the user. -->
     <div class="question-area">
+        <!-- Displays the user's name and their current score. -->
         <p><span id="users-name">Joe</span> your score is <span id="correct-answers">0</span> out of 5.</p>
         <h2>Question <span id="question-num">1</span></h2>
         <p id="question">Your first question is..."</p>
+        <!-- This is where the answer buttons are displayed. It also calls the checkAnswer function when an answer is clicked. -->
         <div id="answers-area">
             <button id="answer1" class="answers" onclick="checkAnswer(1)"></button>
             <button id="answer2" class="answers" onclick="checkAnswer(2)"></button>
             <button id="answer3" class="answers" onclick="checkAnswer(3)"></button>
         </div>
+        <!-- This tells the user if they got the question correct or incorrect. -->
         <p id="question-response"></p>
             <button id="nextQ" class="buttons">Next Question</button>
             <button id="playAgain" class="buttons">Play Again</button>
             <button id="results" class="buttons">Results</button>
     </div>
 
+    <!-- The Results Area the tell the user their overall score and a message regarding their score. -->
     <div class="results-area">
         <p id="results-message"></p>
         <button id="home-button" class="buttons">Home</button>

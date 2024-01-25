@@ -90,9 +90,25 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ![Question Area in mobile view](documentation/screenshots/mobile-question-area.png)
 
+* When the Question Area is loaded/displayed the user's name is displayed at the top and their current score.
+* When the user get a question right their score increase by 1.
+* The question number is displayed underneath and the number increases by 1 every time the user clicks on the "Next Question" button.
+* Below this is the current question. This also changes when the user clicks on the "Next Question" button.
+* Next is the three possible answers to the current question. These also change for each question.
+* The "Next Question" button allows the user to move to the next question. 
+* The "Play Again" button will work at anytime if user wishes to start the quiz again.
+* The "Results" button is disabled until the user answers all the questions. 
+
 ![Correct answer selected](documentation/screenshots/mobile-correct-answer.png)
 
+* When the user clicks on the correct answer, the answer they clicked on turns green.
+* A message is displayed below the answers to inform them of this.
+* When the user clicks on the "Next Question" button, this message will disappear.
+
 ![Incorrect answer selected](documentation/screenshots/mobile-incorrect-answer.png)
+
+* When the user clicks on an incorrect answer, the answer they clicked on turns red.
+* A message is displayed below the answers to inform them of this.
 
 ### Results Area
 

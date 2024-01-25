@@ -154,6 +154,10 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ## Testing
 
+* I tested the website using Chrome, Firefox and Microsoft Edge.
+* I confirmed that the website is responsive and fully functional using Chrome devtools and https://responsivedesignchecker.com/.
+
+
 ### Validator Testing
 
 * HTML
@@ -212,5 +216,9 @@ Forking is a way to make a copy of the original repository on your GitHub accoun
 [Back to Top](#fantasy-football-quiz)
 
 ## Credits
+
+* I used www.w3schools.com to learn how to use modals and how to create a copy of an array.
+* I used Devtools and www.responsivedesignchecker.com to test the responsiveness of the website.
+
 
 [Back to Top](#fantasy-football-quiz)

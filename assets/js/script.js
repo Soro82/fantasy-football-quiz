@@ -1,5 +1,4 @@
 // Global variables to be used in multiple functions
-const displayAnswers = document.getElementsByClassName('answers');
 const questionArea = document.getElementsByClassName('question-area')[0];
 const welcomeArea = document.getElementsByClassName('welcome-area')[0];
 const resultsArea = document.getElementsByClassName('results-area')[0];
@@ -89,6 +88,7 @@ function pickQuestion() {
  * The question picked was sent from the pickQuestion function.
  */
 function setAnswers(num) {
+    let displayAnswers = document.getElementsByClassName('answers');
     displayAnswers[0].innerText = questions[num].answers[0];
     displayAnswers[1].innerText = questions[num].answers[1];
     displayAnswers[2].innerText = questions[num].answers[2];

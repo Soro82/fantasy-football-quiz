@@ -92,7 +92,6 @@ function setAnswers(num) {
     displayAnswers[0].innerText = questions[num].answers[0];
     displayAnswers[1].innerText = questions[num].answers[1];
     displayAnswers[2].innerText = questions[num].answers[2];
-    // checkAnswerClicked(num);
 }
 
 /**

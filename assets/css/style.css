@@ -1,12 +1,14 @@
 /* Google Fonts Import */
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap');
 
+  /* Set the background color and the font family for the quiz */
 body {
     background-color: rgb(164, 152, 237);
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
 }
 
+/* Set the main heading to uppercase */
 h1 {
     text-transform: uppercase;
 }
@@ -15,6 +17,8 @@ h1, h2 {
     text-align: center;
 }
 
+/* Display the items in the Welcome Area in a column and center them. 
+Set a max width for the Welcome Area so that it's not too stretched on the screen. */
 .welcome-area {
     display: flex;
     flex-direction: column;
@@ -27,16 +31,13 @@ h1, h2 {
     border-radius: 15px;
 }
 
-label {
-    text-decoration: underline;
-}
-
 #name {
     height: 30px;
     width: 100px;
     border-radius: 10px;
 }
 
+/* Display the difficulty levels in a row and center them. */
 #difficulty {
     display: flex;
     margin: 1rem;
@@ -44,6 +45,7 @@ label {
     text-align: center;
 }
 
+/* Style the difficulty level boxes */
 .difficulty-levels {
     margin: 5px;
     border: 1px solid black;
@@ -61,6 +63,8 @@ label {
     border-radius: 10px;
 }
 
+/* Display the items in the Question Area in a column and center them. 
+Set a max width for the Question Area so that it's not too stretched on the screen. */
 .question-area {
     background-color: aliceblue;
     border: 2px solid;
@@ -82,12 +86,14 @@ label {
     text-align: center;
 }
 
+/* Display the answer buttons in row and center them. */
 #answers-area {
     display: flex;
     margin: 1rem;
     justify-content: center;
 }
 
+/* Style the answer buttons */
 .answers {
     margin: 5px;
     border: 1px solid black;
@@ -98,6 +104,7 @@ label {
     background-color: plum;
 }
 
+/* Set all the buttons, except the answer buttons with the same style */
 .buttons {
     height: 40px;
     width: 150px;
@@ -106,6 +113,7 @@ label {
     font-size: 1rem;
 }
 
+/* Set the size and the background color in the message on the Results Area */
 #results-message {
     margin: 60px auto;
     border: 1px solid black;

@@ -73,22 +73,20 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ### Welcome Area
 
-![Welcome Area in mobile view](documentation/screenshots/mobile-welcome-area.png)
-
 * The Welcome Area has a message at the top to welcome the user to the quiz.
 * The user is asked to enter their name in the box underneath and chose a level of difficulty, easy or hard.
 * The "Easy" button is initially selected and the questions are set to the easy questions when the quiz is loaded.
 * Next the user must click the "Start" button to start the quiz. This will hide the Welcome Area and display the Question Area.
 
-![Welcome Area with no username entered](documentation/screenshots/mobile-no-name-entered.png)
+![Welcome Area in mobile view](documentation/screenshots/mobile-welcome-area.png)
 
 * If the user clicks "Start" without entering a name, a message will appear above the difficulty level buttons to inform them of this.
 * The "Start" button will not work until they have entered a name.
 
+![Welcome Area with no username entered](documentation/screenshots/mobile-no-name-entered.png)
+
 
 ### Question Area
-
-![Question Area in mobile view](documentation/screenshots/mobile-question-area.png)
 
 * When the Question Area is loaded/displayed the user's name is displayed at the top and their current score.
 * When the user get a question right their score increase by 1.
@@ -99,24 +97,24 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 * The "Play Again" button will work at anytime if user wishes to start the quiz again.
 * The "Results" button is disabled until the user answers all the questions. 
 
-![Correct answer selected](documentation/screenshots/mobile-correct-answer.png)
+![Question Area in mobile view](documentation/screenshots/mobile-question-area.png)
 
 * When the user clicks on the correct answer, the answer they clicked on turns green.
 * A message is displayed below the answers to inform them of this.
 * When the user clicks on the "Next Question" button, this message will disappear.
 
-![Incorrect answer selected](documentation/screenshots/mobile-incorrect-answer.png)
+![Correct answer selected](documentation/screenshots/mobile-correct-answer.png)
 
 * When the user clicks on an incorrect answer, the answer they clicked on turns red.
 * A message is displayed below the answers to inform them of this.
 
-### Results Area
+![Incorrect answer selected](documentation/screenshots/mobile-incorrect-answer.png)
 
-![Final Question View](documentation/screenshots/mobile-final-question.png)
+### Results Area
 
 * When the user answer the last question, the "Next Question" button is disabled and the "Results" button is enabled.
 
-![Results Area in mobile view](documentation/screenshots/mobile-result-area.png)
+![Final Question View](documentation/screenshots/mobile-final-question.png)
 
 * When the "Results button is clicked by the user, the Question Area is hidden and the Results Area is displayed.
 * A message is displayed with the user's name included. 
@@ -125,6 +123,8 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 * The message also includes a sentence to encourage the user to play again.
 * Below the message is the "Home" button.
 * When the user clicks on the "Home" button, the Results Area is hidden and the Welcome Area is displayed.
+
+![Results Area in mobile view](documentation/screenshots/mobile-result-area.png)
 
 [Back to Top](#fantasy-football-quiz)
 

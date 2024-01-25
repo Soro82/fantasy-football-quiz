@@ -65,12 +65,6 @@ function checkName() {
  * The question picked is displayed on the screen and the setAnswers function is called.
  */
 function pickQuestion() {
-     // Reset the correctAnswer property of the previous question
-    //  if (numArray.length > 0) {
-    //     let prevQuestionNum = numArray[numArray.length - 1];
-    //     questions[prevQuestionNum].correctAnswer = null;
-    // }
-
     // generate random number between 0 and 7
     num = Math.floor(Math.random() * 8);
     
@@ -102,30 +96,14 @@ function setAnswers(num) {
 }
 
 /**
- * Checks which answer the user clicked on and sends it to the checkAnswer function.
- */
-function checkAnswerClicked(answerBoxNum) {
-    // let answerBoxes = document.getElementsByClassName('answers');
-
-    // for (let i = 0; i < 3; i++) {
-    //     answerBoxes[i].addEventListener('click', function() {
-            let answerClicked = questions[num].answers[answerBoxNum - 1];
-            console.log(answerClicked);
-            checkAnswer(num, answerClicked, answerBoxNum);
-    //     });
-    // }     
-}
-
-/**
  * Gets the correct answer to the question picked in the pickQuestion function and compares
  * against the answer the user picked. If it's correct the answer box turns green otherwise it
  * turns red. A message is displayed to inform the user if they were correct.
- * @param {integer} questionNumber The question number that was picked randomly in the pickQuestion function.
- * @param {integer} answerPicked The value displayed in the answer box picked by the user.
- * @param {integer} answerBoxNum The number of the answer box picked.
+ * @param {integer} answerBoxNum The number of the answer box picked by the user.
  */
-function checkAnswer(questionNumber, answerPicked, answerBoxNum) {
-    let correctAns = questions[questionNumber].correctAnswer;
+function checkAnswer(answerBoxNum) {
+    let correctAns = questions[num].correctAnswer;
+    let answerPicked = questions[num].answers[answerBoxNum - 1];
     
     if (correctAns === answerPicked) {
         document.getElementById('question-response').innerText = "Correct answer. Well done.";

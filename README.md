@@ -112,7 +112,19 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ### Results Area
 
+![Final Question View](documentation/screenshots/mobile-final-question.png)
+
+* When the user answer the last question, the "Next Question" button is disabled and the "Results" button is enabled.
+
 ![Results Area in mobile view](documentation/screenshots/mobile-result-area.png)
+
+* When the "Results button is clicked by the user, the Question Area is hidden and the Results Area is displayed.
+* A message is displayed with the user's name included. 
+* It also includes the user's final score and a sentence about their score.
+* The sentence is different, depending on what their final score was.
+* The message also includes a sentence to encourage the user to play again.
+* Below the message is the "Home" button.
+* When the user clicks on the "Home" button, the Results Area is hidden and the Welcome Area is displayed.
 
 [Back to Top](#fantasy-football-quiz)
 

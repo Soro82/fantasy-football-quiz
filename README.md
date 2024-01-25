@@ -77,9 +77,13 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 * The Welcome Area has a message at the top to welcome the user to the quiz.
 * The user is asked to enter their name in the box underneath and chose a level of difficulty, easy or hard.
-*  
+* The "Easy" button is initially selected and the questions are set to the easy questions when the quiz is loaded.
+* Next the user must click the "Start" button to start the quiz. This will hide the Welcome Area and display the Question Area.
 
 ![Welcome Area with no username entered](documentation/screenshots/mobile-no-name-entered.png)
+
+* If the user clicks "Start" without entering a name, a message will appear above the difficulty level buttons to inform them of this.
+* The "Start" button will not work until they have entered a name.
 
 
 ### Question Area

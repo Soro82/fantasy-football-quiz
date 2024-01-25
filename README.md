@@ -154,8 +154,19 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ## Testing
 
-* I tested the website using Chrome, Firefox and Microsoft Edge.
+* I tested the quiz using Chrome, Firefox and Microsoft Edge.
 * I confirmed that the website is responsive and fully functional using Chrome devtools and https://responsivedesignchecker.com/.
+* I tested the Welcome Area to see if the message informing the user that they have not entered a name appears when they click on the "Start" button without entering a name.
+* I tested the Welcome Area to see if the "Hard" button turns green when the user clicks on it and the "Easy" button turns blue and vice versa.
+
+
+### Bugs
+
+##### Fixed Bugs
+
+##### Unfixed Bugs
+
+* There are no unfixed bugs.
 
 
 ### Validator Testing

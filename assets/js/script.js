@@ -8,6 +8,7 @@ let numArray = [];
 let questionNumDisplay = 0;
 let currentScore = 0;
 let questions = [...easyQuestions];
+let num = 0;
 
 /**
  * Runs when the quiz is opened/loaded and displays the welcome area to the user
@@ -65,13 +66,13 @@ function checkName() {
  */
 function pickQuestion() {
      // Reset the correctAnswer property of the previous question
-     if (numArray.length > 0) {
-        let prevQuestionNum = numArray[numArray.length - 1];
-        questions[prevQuestionNum].correctAnswer = null;
-    }
+    //  if (numArray.length > 0) {
+    //     let prevQuestionNum = numArray[numArray.length - 1];
+    //     questions[prevQuestionNum].correctAnswer = null;
+    // }
 
     // generate random number between 0 and 7
-    let num = Math.floor(Math.random() * 8);
+    num = Math.floor(Math.random() * 8);
     
     if (numArray.includes(num)) {
         pickQuestion();
@@ -97,21 +98,22 @@ function setAnswers(num) {
     displayAnswers[0].innerText = questions[num].answers[0];
     displayAnswers[1].innerText = questions[num].answers[1];
     displayAnswers[2].innerText = questions[num].answers[2];
-    checkAnswerClicked(num);
+    // checkAnswerClicked(num);
 }
 
 /**
  * Checks which answer the user clicked on and sends it to the checkAnswer function.
  */
-function checkAnswerClicked(questionNum) {
-    let answerBoxes = document.getElementsByClassName('answers');
+function checkAnswerClicked(answerBoxNum) {
+    // let answerBoxes = document.getElementsByClassName('answers');
 
-    for (let i = 0; i < 3; i++) {
-        answerBoxes[i].addEventListener('click', function() {
-            let answerClicked = questions[questionNum].answers[i];
-            checkAnswer(questionNum, answerClicked, i + 1);
-        });
-    }     
+    // for (let i = 0; i < 3; i++) {
+    //     answerBoxes[i].addEventListener('click', function() {
+            let answerClicked = questions[num].answers[answerBoxNum - 1];
+            console.log(answerClicked);
+            checkAnswer(num, answerClicked, answerBoxNum);
+    //     });
+    // }     
 }
 
 /**

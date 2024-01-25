@@ -55,7 +55,17 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ### Color Scheme
 
+* I chose rgb(164, 152, 237) for the background color because the color people associate most with Fantasy Football is purple.
+* I google the official colors of the Fantasy Football website but the purple they use (rgb(56,0,60)) was too dark to see the features on my quiz. They use it for banners on the website.
+* They also use a light blue color rgb(4,245,255) but this was too bright for my quiz. I used a similar light blue (aqua) for the message background in the Results area.
+* I used rgb(53, 124, 216) and rgb(19, 251, 19) for the "Easy" and "Hard" buttons to make them stand out on the screen and they look good against the background color.
+* I chose green and red for correct and incorrect answers as these are known worldwide as positive and negative respectively.
+
 ### Font
+
+* I decided to use the "Noto Sans" font family for my website.
+* I googled the top ten font families to use on websites and I thought "Noto Sans" was the a good font for a quiz. There is not much text on the screen at any one time so I wanted it to stand out more to make it look more like a game.
+* I imported them from [Google Fonts](https://fonts.google.com/)
 
 [Back to Top](#fantasy-football-quiz)
 
@@ -64,6 +74,10 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 ### Welcome Area
 
 ![Welcome Area in mobile view](documentation/screenshots/mobile-welcome-area.png)
+
+* The Welcome Area has a message at the top to welcome the user to the quiz.
+* The user is asked to enter their name in the box underneath and chose a level of difficulty, easy or hard.
+*  
 
 ![Welcome Area with no username entered](documentation/screenshots/mobile-no-name-entered.png)
 

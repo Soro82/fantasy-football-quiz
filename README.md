@@ -163,8 +163,31 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 * I tested the quiz using Chrome, Firefox and Microsoft Edge.
 * I confirmed that the website is responsive and fully functional using Chrome devtools and https://responsivedesignchecker.com/.
-* I tested the Welcome Area to see if the message informing the user that they have not entered a name appears when they click on the "Start" button without entering a name.
-* I tested the Welcome Area to see if the "Hard" button turns green when the user clicks on it and the "Easy" button turns blue and vice versa.
+
+
+| Location | Test | Result |
+| :------: | :--: | :----: |
+| Welcome Area | User name not entered message | Passed |
+| Welcome Area | "Hard" turns green when clicked | Passed |
+| Welcome Area | "Easy" turns green when clicked | Passed |
+| Question Area | User's score increases by 1 for correct answer | Passed |
+| Question Area | User's score stays the same for incorrect answer | Passed |
+| Question Area | Correct answer box turns green when clicked | Passed |
+| Question Area | Incorrect answer box turns red when clicked | Passed |
+| Question Area | "Next Question" button is enabled | Passed |
+| Question Area | "Play Again" button is enabled | Passed |
+| Question Area | "Results" button is disabled | Passed |
+| "Next Question" | Question number increases by 1 when clicked | Passed |
+| "Next Question" | Question displayed changes when clicked | Passed |
+| "Next Question" | Answer buttons text changes when clicked | Passed |
+| "Play Again" | Welcome Area is displayed when clicked | Passed |
+| "Next Question" | Disabled when user gets to final question | Passed |
+| "Results" button | Enabled when user gets to final question | Passed |
+| "Results" button | Results Area is displayed when clicked | Passed |
+| Results Area | User's name is included in message | Passed |
+| Results Area | User's score is correct in message | Passed |
+| Results Area | Results message is correct for each score | Passed |
+| "Home" button | Welcome Area is displayed when clicked | Passed |
 
 
 ### Bugs

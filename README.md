@@ -89,6 +89,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 ### Question Area
 
 * When the Question Area is loaded/displayed the user's name is displayed at the top and their current score.
+* If the user enters their name in lowercase their name will be displayed with the first letter in uppercase.
 * When the user get a question right their score increase by 1.
 * The question number is displayed underneath and the number increases by 1 every time the user clicks on the "Next Question" button.
 * Below this is the current question. This also changes when the user clicks on the "Next Question" button.
@@ -136,7 +137,8 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 * The buttons in the Question Area are displayed in a column on mobile phone screens.
 * The buttons in the Question Area are displayed in a row on tablets and desktop screens.
 
-### Tablet Screen Size
+<details>
+<summary>Tablet Screen Size</summary>
 
 ![Welcome Area in tablet view](documentation/screenshots/responsiveness/tablet-level-chosen.png)
 
@@ -144,11 +146,16 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ![Results Area in tablet view](documentation/screenshots/responsiveness/tablet-result-area.png)
 
-### Desktop Screen Size
+</details>
+
+<details>
+<summary>Desktop Screen Size</summary>
 
 ![Welcome Area in desktop view](documentation/screenshots/responsiveness/desktop-level-chosen.png)
 
 ![Question Area in desktop view](documentation/screenshots/responsiveness/desktop-correct-answer.png)
+
+</details>
 
 [Back to Top](#fantasy-football-quiz)
 

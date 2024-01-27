@@ -64,7 +64,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 ### Font
 
 * I decided to use the "Noto Sans" font family for my website.
-* I googled the top ten font families to use on websites and I thought "Noto Sans" was the a good font for a quiz. There is not much text on the screen at any one time so I wanted it to stand out more to make it look more like a game.
+* I googled the top ten font families to use on websites and I thought "Noto Sans" was a good font for a quiz. There is not much text on the screen at any one time so I wanted it to stand out more to make it look more like a game.
 * I imported them from [Google Fonts](https://fonts.google.com/)
 
 [Back to Top](#fantasy-football-quiz)
@@ -74,7 +74,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 ### Welcome Area
 
 * The Welcome Area has a message at the top to welcome the user to the quiz.
-* The user is asked to enter their name in the box underneath and chose a level of difficulty, easy or hard.
+* The user is asked to enter their name in the box underneath and choose a level of difficulty, easy or hard.
 * The "Easy" button is initially selected and the questions are set to the easy questions when the quiz is loaded.
 * Next the user must click the "Start" button to start the quiz. This will hide the Welcome Area and display the Question Area.
 
@@ -90,12 +90,12 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 * When the Question Area is loaded/displayed the user's name is displayed at the top and their current score.
 * If the user enters their name in lowercase their name will be displayed with the first letter in uppercase.
-* When the user get a question right their score increase by 1.
+* When the user gets a question right their score increase by 1.
 * The question number is displayed underneath and the number increases by 1 every time the user clicks on the "Next Question" button.
 * Below this is the current question. This also changes when the user clicks on the "Next Question" button.
-* Next is the three possible answers to the current question. These also change for each question.
+* Next are the three possible answers to the current question. These also change for each question.
 * The "Next Question" button allows the user to move to the next question. 
-* The "Play Again" button will work at anytime if user wishes to start the quiz again.
+* The "Play Again" button will work at any time, if user wishes to start the quiz again.
 * The "Results" button is disabled until the user answers all the questions. 
 
 ![Question Area in mobile view](documentation/screenshots/mobile-question-area.png)
@@ -113,7 +113,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ### Results Area
 
-* When the user answer the last question, the "Next Question" button is disabled and the "Results" button is enabled.
+* When the user answers the last question, the "Next Question" button is disabled and the "Results" button is enabled.
 
 ![Final Question View](documentation/screenshots/mobile-final-question.png)
 
@@ -127,13 +127,17 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ![Results Area in mobile view](documentation/screenshots/mobile-result-area.png)
 
+### Features Left To Implement
+* A timer for the hard questions.
+* A leader board.
+
 [Back to Top](#fantasy-football-quiz)
 
 ## Responsiveness
 
 * The quiz was tested on mobile phone, tablet and desktop size screens and no issues were identified.
 * In the Features section you can see how it looks on mobile phone screen sizes.
-* On tablets and desktop screens sizes the border around the Welcome Area and the Question Area expands to a maximum width of 600 pixels.
+* On tablets and desktop screen sizes the border around the Welcome Area and the Question Area expands to a maximum width of 600 pixels.
 * The buttons in the Question Area are displayed in a column on mobile phone screens.
 * The buttons in the Question Area are displayed in a row on tablets and desktop screens.
 
@@ -194,7 +198,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ##### Fixed Bugs
 
-* I was trying to get the buttons centered in the Question Area. I tried align-items: center and then justify-content: center but it wasn't working. Eventually I got it working with text-align: center.
+* I was trying to get the buttons centered in the Question Area. I tried align-items: center and then justify-content: center but it wasn't working. Eventually, I got it working with text-align: center.
 * I was using .innerText to get the user's name and store it in a variable but it was working so I went back over the Love Maths project and realised that I needed to use .value instead.
 * I had a bug with the user's current score. 
   * It worked for the first three questions and then it would increase by 1 if the answer was incorrect and increase by 2 if the answer was correct and sometimes it would increase by 3 for questions four and five. 
@@ -207,7 +211,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 * I had a bug with the "Play Again" button.
   * Any questions that were previously answered correctly were incorrect even when the correct answer was clicked.
   * I soon realised that the solution to the previous bug was causing this bug.
-  * The correct answer for the questions in the first round were set to bull.
+  * The correct answer for the questions in the first round were set to null.
   * I tried making a copy of the questions array and using it for the quiz but the correct answers in the original array were still being changed to null.
   * I tried using a variable and setting it's value to the correct answer of the previous question before it is set to null and then use the variable to change it back before the next question but this didn't work.
   * I decided to change the answer boxes from div's to buttons and I used the 'onclick' function in the HTML to call the checkAnswer function.
@@ -219,7 +223,6 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 ##### Unfixed Bugs
 
 * There are no unfixed bugs.
-
 
 ### Validator Testing
 
@@ -254,7 +257,7 @@ The site was deployed to GitHub pages. The steps to deploy are:
 
 * In the GitHub repository, navigate to the settings tab.
 * From the source section drop-down menu, select the Master Branch.
-* Once the Master Branch has been selected, the page provided the link to the website.
+* Once the Master Branch has been selected, the page provides the link to the website.
 
 Click [here](https://soro82.github.io/fantasy-football-quiz/) for the live link.
 
@@ -273,7 +276,7 @@ Forking is a way to make a copy of the original repository on your GitHub accoun
 * Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 * Open Git Bash.
 * Change the current working directory to the location where you want the cloned directory to be made.
-* Type git clone and then paste The URL copied in the step 3.
+* Type git clone and then paste The URL copied in step 3.
 * Press Enter and your local clone will be created.
 
 [Back to Top](#fantasy-football-quiz)

@@ -55,10 +55,10 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ### Color Scheme
 
-* I chose rgb(164, 152, 237) for the background color because the color people associate most with Fantasy Football is purple.
-* I google the official colors of the Fantasy Football website but the purple they use (rgb(56,0,60)) was too dark to see the features on my quiz. They use it for banners on the website.
-* They also use a light blue color rgb(4,245,255) but this was too bright for my quiz. I used a similar light blue (aqua) for the message background in the Results area.
-* I used rgb(53, 124, 216) and rgb(19, 251, 19) for the "Easy" and "Hard" buttons to make them stand out on the screen and they look good against the background color.
+* I chose `rgb(164, 152, 237)` for the background color because the color people associate most with Fantasy Football is purple.
+* I google the official colors of the Fantasy Football website but the purple they use `(rgb(56,0,60)`) was too dark to see the features on my quiz. They use it for banners on the website.
+* They also use a light blue color `rgb(4,245,255)` but this was too bright for my quiz. I used a similar light blue (aqua) for the message background in the Results area.
+* I used `rgb(53, 124, 216)` and `rgb(19, 251, 19)` for the "Easy" and "Hard" buttons to make them stand out on the screen and they look good against the background color.
 * I chose green and red for correct and incorrect answers as these are known worldwide as positive and negative respectively.
 
 ### Font
@@ -193,6 +193,28 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 ### Bugs
 
 ##### Fixed Bugs
+
+* I was trying to get the buttons centered in the Question Area. I tried align-items: center and then justify-content: center but it wasn't working. Eventually I got it working with text-align: center.
+* I was using .innerText to get the user's name and store it in a variable but it was working so I went back over the Love Maths project and realised that I needed to use .value instead.
+* I had a bug with the user's current score. 
+  * It worked for the first three questions and then it would increase by 1 if the answer was incorrect and increase by 2 if the answer was correct and sometimes it would increase by 3 for questions four and five. 
+  * I didn't know what to ask tutor support so I went through every function until I narrowed it down to two functions. 
+  * I contacted tutor support and they told me that I shouldn't put an event listener inside a function and to do what was done in the Love Maths project. 
+  * I tried to move it to the 'DOMContentLoaded'  function but it didn't work because I needed it to be called for each question.
+  * I posted the bug on Slack and Craig Hudson_4P was able to help me solve the bug.
+  * It was counting the answer from the previous question also so I had to set the correct answer of the previous question to null.
+  * It worked perfectly after that.
+* I had a bug with the "Play Again" button.
+  * Any questions that were previously answered correctly were incorrect even when the correct answer was clicked.
+  * I soon realised that the solution to the previous bug was causing this bug.
+  * The correct answer for the questions in the first round were set to bull.
+  * I tried making a copy of the questions array and using it for the quiz but the correct answers in the original array were still being changed to null.
+  * I tried using a variable and setting it's value to the correct answer of the previous question before it is set to null and then use the variable to change it back before the next question but this didn't work.
+  * I decided to change the answer boxes from div's to buttons and I used the 'onclick' function in the HTML to call the checkAnswer function.
+  * I asked my mentor if it was OK to do this because I thought that all the functionality 
+  had to be in the script.js file.
+  * This allowed me to delete the checkAnswerClicked function which is where the event listener was to check which answer was clicked by the user.
+  It also meant only passing one parameter to the checkAnswer function instead of three which is what I originally had.
 
 ##### Unfixed Bugs
 

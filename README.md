@@ -205,7 +205,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
   * I didn't know what to ask tutor support so I went through every function until I narrowed it down to two functions. 
   * I contacted tutor support and they told me that I shouldn't put an event listener inside a function and to do what was done in the Love Maths project. 
   * I tried to move it to the 'DOMContentLoaded'  function but it didn't work because I needed it to be called for each question.
-  * I posted the bug on Slack and Craig Hudson_4P was able to help me solve the bug.
+  * I posted the bug on Slack and Craig Hudson_4P was able to help me solve the bug. (I had to remove this solution to fix the bug with the "Play Again" button below.)
   * It was counting the answer from the previous question also so I had to set the correct answer of the previous question to null.
   * It worked perfectly after that.
 * I had a bug with the "Play Again" button.
@@ -285,6 +285,8 @@ Forking is a way to make a copy of the original repository on your GitHub accoun
 
 * I used www.w3schools.com to learn how to use modals and how to create a copy of an array.
 * I used Devtools and www.responsivedesignchecker.com to test the responsiveness of the website.
-
+* I learned how to capitalize the first letter in the user's name on https://www.freecodecamp.org/.
+* I downloaded the favicon from www.freepik.com.
+I learned how to use the onclick event and how to use it to pass parameters on www.w3schools.com.
 
 [Back to Top](#fantasy-football-quiz)

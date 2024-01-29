@@ -185,20 +185,20 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 | Question Area | Incorrect answer clicked by user | Answer box turns red | Passed |
 | Question Area | "Next Question" button | Enabled | Passed |
 | Question Area | "Play Again" button | Enabled | Passed |
-| Question Area | "Results" button | Enabled | Passed |
+| Question Area | "Results" button | Disabled | Passed |
 | Question Area | "Next Question" clicked | Question number increases by 1 | Passed |
 | Question Area | "Next Question" clicked | Question displayed changes | Passed |
-| Question Area | "Next Question" clicked | Answer buttons values changes | Passed |
+| Question Area | "Next Question" clicked | Answer button values change | Passed |
 | Question Area | "Play Again" clicked by user | Welcome Area is displayed | Passed |
 | Question Area | Final question displayed | "Next Question" button Disabled | Passed |
 | Question Area | Final question displayed | "Results" button Enabled | Passed |
 | Question Area | "Results" clicked by user | Results Area is displayed | Passed |
 | Results Area | Results message displayed | User's name is included | Passed |
 | Results Area | Results message displayed | User's score is correct | Passed |
-| Results Area | User scores less than 3 | Results message is correct | Passed |
-| Results Area | User scores less 3 | Results message is correct | Passed |
-| Results Area | User scores less 4 | Results message is correct | Passed |
-| Results Area | User scores less 5 | Results message is correct | Passed |
+| Results Area | User score less than 3 | Results message is correct | Passed |
+| Results Area | User score equal to 3 | Results message is correct | Passed |
+| Results Area | User score equal to 4 | Results message is correct | Passed |
+| Results Area | User score equal to 5 | Results message is correct | Passed |
 | Results Area | "Home" clicked by user | Welcome Area is displayed | Passed |
 
 ### Bugs
@@ -214,8 +214,8 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 | Store user's name in a variable | .value | Fixed |
 | User's score increases by 2 after correct answer | move event listener into the 'DOMContentLoaded' function | Failed |
 | User's score increases by 2 after correct answer | set the correct answer of the previous question to null | Fixed |
-| Correct answers incorrect when played again | make copy of questions array and use it | Failed |
-| Correct answers incorrect when played again | use variable to store correct answer of previous question | Failed |
+| Correct answers incorrect when played again | make copy of questions array and use it for quiz | Failed |
+| Correct answers incorrect when played again | use variable to store correct answer of previous question and reset it after each question | Failed |
 | Correct answers incorrect when played again | use 'onclick' function in the HTML to call the checkAnswer function | Fixed |
 
 ##### Unfixed Bugs

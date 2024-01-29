@@ -23,7 +23,7 @@ The Fantasy Football Quiz is for people who play the Fantasy Premier League Fant
 * As a user I want to be able to enter my name before I start the quiz.
 * As a user I want to be able to choose an answer from a selection of possible choices.
 * As a user I want to know if I got the question correct or incorrect.
-* As a user I want to how many questions I got correct as I go through the questions.
+* As a user I want to know how many questions I got correct as I go through the questions.
 * As a user I want to know my total score at the end of the game.
 * As a user I want to be told how well I did and if I can improve.
 
@@ -56,7 +56,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 ### Color Scheme
 
 * I chose `rgb(164, 152, 237)` for the background color because the color people associate most with Fantasy Football is purple.
-* I google the official colors of the Fantasy Football website but the purple they use `(rgb(56,0,60)`) was too dark to see the features on my quiz. They use it for banners on the website.
+* I googled the official colors of the Fantasy Football website but the purple they use `(rgb(56,0,60)`) was too dark to see the features on my quiz. They use it for banners on the website.
 * They also use a light blue color `rgb(4,245,255)` but this was too bright for my quiz. I used a similar light blue (aqua) for the message background in the Results area.
 * I used `rgb(53, 124, 216)` and `rgb(19, 251, 19)` for the "Easy" and "Hard" buttons to make them stand out on the screen and they look good against the background color.
 * I chose green and red for correct and incorrect answers as these are known worldwide as positive and negative respectively.
@@ -93,7 +93,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 * When the user gets a question right their score increase by 1.
 * The question number is displayed underneath and the number increases by 1 every time the user clicks on the "Next Question" button.
 * Below this is the current question. This also changes when the user clicks on the "Next Question" button.
-* Next are the three possible answers to the current question. These also change for each question.
+* Next are the three possible answers to the current question. Their values change for each question.
 * The "Next Question" button allows the user to move to the next question. 
 * The "Play Again" button will work at any time, if user wishes to start the quiz again.
 * The "Results" button is disabled until the user answers all the questions. 
@@ -135,7 +135,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ## Responsiveness
 
-* The quiz was tested on mobile phone, tablet and desktop size screens and no issues were identified.
+* The quiz was tested on mobile phone, tablet and desktop screen sizes and no issues were identified.
 * In the Features section you can see how it looks on mobile phone screen sizes.
 * On tablets and desktop screen sizes the border around the Welcome Area and the Question Area expands to a maximum width of 600 pixels.
 * The buttons in the Question Area are displayed in a column on mobile phone screens.
@@ -172,8 +172,8 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 | Location | Test | Result |
 | :------: | :--: | :----: |
 | Welcome Area | User name not entered message | Passed |
-| Welcome Area | "Hard" turns green when clicked | Passed |
-| Welcome Area | "Easy" turns green when clicked | Passed |
+| Welcome Area | "Hard" turns green and "Easy" turns blue when clicked | Passed |
+| Welcome Area | "Easy" turns green and "Hard" turns blue when clicked | Passed |
 | Question Area | User's score increases by 1 for correct answer | Passed |
 | Question Area | User's score stays the same for incorrect answer | Passed |
 | Question Area | Correct answer box turns green when clicked | Passed |
@@ -198,8 +198,8 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 ##### Fixed Bugs
 
-* I was trying to get the buttons centered in the Question Area. I tried align-items: center and then justify-content: center but it wasn't working. Eventually, I got it working with text-align: center.
-* I was using .innerText to get the user's name and store it in a variable but it was working so I went back over the Love Maths project and realised that I needed to use .value instead.
+* I was trying to get the buttons centered in the Question Area. I tried "align-items: center" and then "justify-content: center" but it wasn't working. Eventually, I got it working with "text-align: center".
+* I was using ".innerText" to get the user's name and store it in a variable but it was not working so I went back over the Love Maths project and realised that I needed to use ".value" instead.
 * I had a bug with the user's current score. 
   * It worked for the first three questions and then it would increase by 1 if the answer was incorrect and increase by 2 if the answer was correct and sometimes it would increase by 3 for questions four and five. 
   * I didn't know what to ask tutor support so I went through every function until I narrowed it down to two functions. 
@@ -216,9 +216,10 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
   * I tried using a variable and setting it's value to the correct answer of the previous question before it is set to null and then use the variable to change it back before the next question but this didn't work.
   * I decided to change the answer boxes from div's to buttons and I used the 'onclick' function in the HTML to call the checkAnswer function.
   * I asked my mentor if it was OK to do this because I thought that all the functionality 
-  had to be in the script.js file.
+  had to be in the script.js file. He said it was fine.
   * This allowed me to delete the checkAnswerClicked function which is where the event listener was to check which answer was clicked by the user.
   It also meant only passing one parameter to the checkAnswer function instead of three which is what I originally had.
+  * The quiz worked perfectly after that.
 
 ##### Unfixed Bugs
 
@@ -247,7 +248,7 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 #### Mobile
 
-![Lighthouse results from Desktop test](documentation/testing/lighthouse-mobile.png)
+![Lighthouse results from Mobile test](documentation/testing/lighthouse-mobile.png)
 
 [Back to Top](#fantasy-football-quiz)
 
@@ -255,9 +256,15 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 
 The site was deployed to GitHub pages. The steps to deploy are:
 
-* In the GitHub repository, navigate to the settings tab.
-* From the source section drop-down menu, select the Master Branch.
-* Once the Master Branch has been selected, the page provides the link to the website.
+* On GitHub, navigate to your site's repository.
+* Under your repository's name, click "Settings".
+* In the "Code and Automation" section on the left sidebar, click on "Pages".
+* Under "Source" in the "Build and Deployment", select "Deploy from a branch".
+* From the "Source" section drop-down menu, select the Master Branch.
+* Once the Master Branch has been selected, click "Save".
+* Return to your repository and wait a few minutes.
+* Go to the "Deployments" section in the right sidebar.
+* Click on the link to see your deployed repository.
 
 Click [here](https://soro82.github.io/fantasy-football-quiz/) for the live link.
 
@@ -287,6 +294,6 @@ Forking is a way to make a copy of the original repository on your GitHub accoun
 * I used Devtools and www.responsivedesignchecker.com to test the responsiveness of the website.
 * I learned how to capitalize the first letter in the user's name on https://www.freecodecamp.org/.
 * I downloaded the favicon from www.freepik.com.
-I learned how to use the onclick event and how to use it to pass parameters on www.w3schools.com.
+* I learned how to use the onclick event and how to use it to pass parameters on www.w3schools.com.
 
 [Back to Top](#fantasy-football-quiz)

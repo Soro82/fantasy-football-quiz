@@ -171,30 +171,35 @@ I used [Balsamiq](https://balsamiq.com/) to create wireframes for my website to 
 * I confirmed that the website is responsive and fully functional using Chrome devtools and https://responsivedesignchecker.com/.
 
 
-| Location | Test | Result |
-| :------: | :--: | :----: |
-| Welcome Area | User name not entered message | Passed |
-| Welcome Area | "Hard" turns green and "Easy" turns blue when clicked | Passed |
-| Welcome Area | "Easy" turns green and "Hard" turns blue when clicked | Passed |
-| Question Area | User's score increases by 1 for correct answer | Passed |
-| Question Area | User's score stays the same for incorrect answer | Passed |
-| Question Area | Correct answer box turns green when clicked | Passed |
-| Question Area | Incorrect answer box turns red when clicked | Passed |
-| Question Area | "Next Question" button is enabled | Passed |
-| Question Area | "Play Again" button is enabled | Passed |
-| Question Area | "Results" button is disabled | Passed |
-| "Next Question" | Question number increases by 1 when clicked | Passed |
-| "Next Question" | Question displayed changes when clicked | Passed |
-| "Next Question" | Answer buttons text changes when clicked | Passed |
-| "Play Again" | Welcome Area is displayed when clicked | Passed |
-| "Next Question" | Disabled when user gets to final question | Passed |
-| "Results" button | Enabled when user gets to final question | Passed |
-| "Results" button | Results Area is displayed when clicked | Passed |
-| Results Area | User's name is included in message | Passed |
-| Results Area | User's score is correct in message | Passed |
-| Results Area | Results message is correct for each score | Passed |
-| "Home" button | Welcome Area is displayed when clicked | Passed |
-
+| Location | Test | Expected Result | Result |
+| :------: | :--: | :-------------: | :----: |
+| Welcome Area | No user name entered | Error message appears below input box | Passed |
+| Welcome Area | Less than 2 letters entered for username | Error message appears below input box | Passed |
+| Welcome Area | More than 15 letters entered for username | Error message appears below input box | Passed |
+| Welcome Area | "Hard" clicked by user | "Hard" turns green and "Easy" turns blue | Passed |
+| Welcome Area | "Easy" clicked by user | "Easy" turns green and "Hard" turns blue | Passed |
+| Welcome Area | "Start" clicked by user | Question Area is displayed | Passed |
+| Question Area | Correct answer clicked by user | User's score increases by 1 | Passed |
+| Question Area | Incorrect answer clicked by user | User's score stays the same | Passed |
+| Question Area | Correct answer clicked by user | Answer box turns green | Passed |
+| Question Area | Incorrect answer clicked by user | Answer box turns red | Passed |
+| Question Area | "Next Question" button | Enabled | Passed |
+| Question Area | "Play Again" button | Enabled | Passed |
+| Question Area | "Results" button | Enabled | Passed |
+| Question Area | "Next Question" clicked | Question number increases by 1 | Passed |
+| Question Area | "Next Question" clicked | Question displayed changes | Passed |
+| Question Area | "Next Question" clicked | Answer buttons values changes | Passed |
+| Question Area | "Play Again" clicked by user | Welcome Area is displayed | Passed |
+| Question Area | Final question displayed | "Next Question" button Disabled | Passed |
+| Question Area | Final question displayed | "Results" button Enabled | Passed |
+| Question Area | "Results" clicked by user | Results Area is displayed | Passed |
+| Results Area | Results message displayed | User's name is included | Passed |
+| Results Area | Results message displayed | User's score is correct | Passed |
+| Results Area | User scores less than 3 | Results message is correct | Passed |
+| Results Area | User scores less 3 | Results message is correct | Passed |
+| Results Area | User scores less 4 | Results message is correct | Passed |
+| Results Area | User scores less 5 | Results message is correct | Passed |
+| Results Area | "Home" clicked by user | Welcome Area is displayed | Passed |
 
 ### Bugs
 

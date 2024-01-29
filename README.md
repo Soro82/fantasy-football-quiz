@@ -1,5 +1,7 @@
 # Fantasy Football Quiz
 
+Click [here](https://soro82.github.io/fantasy-football-quiz/) for the live link.
+
 ## Introduction
 
 The Fantasy Football Quiz is for people who play the Fantasy Premier League Fantasy Football game. There are currently over 10 million players worldwide. The questions in the quiz are regarding what players get points for in the Fantasy Football game.

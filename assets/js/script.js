@@ -50,6 +50,12 @@ function checkName() {
     if  (name === '') {
         warning.innerText = 'You have not entered a name.';
         start.addEventListener('click', checkName);
+    } else if (name.length < 2) {
+        warning.innerText = 'Your name is too short.';
+        start.addEventListener('click', checkName);
+    } else if (name.length > 15) {
+        warning.innerText = 'Your name is too long.';
+        start.addEventListener('click', checkName);
     } else {
         let capName = name.charAt(0).toUpperCase() + name.slice(1);
         document.getElementById('users-name').innerText = capName;
@@ -179,10 +185,11 @@ function resetGame() {
     document.getElementById('answer2').style.backgroundColor = 'plum';
     document.getElementById('answer3').style.backgroundColor = 'plum';
     document.getElementById('question-response').innerText = "";
+    document.getElementById('name').value = "";
     document.getElementById('correct-answers').innerText = 0;
     document.getElementById('nextQ').disabled = false;
     document.getElementById('results').disabled = true;  
     questionArea.style.display = 'none';
     resultsArea.style.display = 'none';
-    welcomeArea.style.display = 'block';  
+    welcomeArea.style.display = 'flex';  
 }
